@@ -1,0 +1,687 @@
+\documentclass[11pt, a4paper]{report}
+\usepackage[utf8]{inputenc}
+% ------------ packages section ------------  
+% page set up
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=40mm,
+ right=25mm,
+ top=20mm,
+ bottom=25mm
+ }
+% epigraph
+\usepackage{epigraph}
+% quoting
+\usepackage{csquotes}
+% numbering
+\usepackage[utf8]{inputenc}
+% language set up
+\usepackage[english, main=portuguese]{babel}
+\usepackage{csquotes}
+% line spacing
+\usepackage{setspace}
+% adjust margins
+\usepackage{changepage}
+% number lines
+\usepackage{lineno}
+% titles
+\usepackage{titlesec}
+% colors
+\usepackage[dvipsnames]{xcolor}
+% sorted lists package
+\usepackage{enumerate}
+% insert graphics
+\usepackage{graphicx}
+% wrapp figures in text
+\usepackage{wrapfig}
+% math package
+\usepackage{amsmath}
+% math symbols
+\usepackage{amssymb}
+% appendix
+\usepackage[title]{appendix}
+% letter symbol
+\usepackage[misc]{ifsym}
+% frames
+\usepackage{tcolorbox}
+% listing
+\usepackage{listings}
+% quotes
+\usepackage{dirtytalk}
+% referencing
+\usepackage{nameref}
+% headers and footers
+\usepackage{fancyhdr}
+% caption package - settings
+\usepackage[font={scriptsize,sf}, labelfont=bf]{caption}
+% glossaries
+\usepackage[toc, acronym]{glossaries}
+% nomenclature
+\usepackage[intoc, portuguese]{nomencl}
+% BibLaTeX
+\usepackage[backend=biber, style=ieee]{biblatex} % bwl-FU
+
+% ------------ section setup ------------
+\setcounter{chapter}{-1}
+
+% ------------ links setup ------------
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	citecolor=blue,
+	filecolor=magenta,      
+	urlcolor=cyan,
+	pdftitle={Overleaf Example},
+	pdfpagemode=FullScreen,
+}
+
+% ------------ box setup ------------ 
+% simple box
+\newtcolorbox[auto counter,number within=section]{simplebox}[2][]{
+arc=0mm,
+%breakable=true,
+%coltitle=white,
+%coltext=black,
+%colback=lightgray,
+%colframe=darkgray,
+fontupper=\sffamily,
+fonttitle=\sffamily\bfseries,
+title=\sffamily Destaque~\thetcbcounter -- #2,#1
+}
+
+% code box
+\newtcolorbox[auto counter,number within=section]{algbox}[2][]{
+arc=0mm,
+%coltitle=white,
+%coltext=black,
+colback=lightgray,
+%colframe=darkgray,
+fontupper=\sffamily,
+fonttitle=\sffamily\bfseries,
+title=\sffamily Algorithm~\thetcbcounter -- #2,#1
+}
+
+% ------------ theorems ------------ 
+%\theoremstyle{definition}
+\newtheorem{problem}{Problema}[chapter]
+\newtheorem{definition}{Definição}[section]
+\newtheorem{assumption}{Premissa}[section]
+
+% ------------ page setup ------------ 
+%\pagecolor{black}
+%\color{white}
+% Set formats for each heading level
+\titleformat{\chapter}[display]
+  {\normalfont\sffamily\huge\bfseries}
+  {\chaptertitlename\ \thechapter}{20pt}{\LARGE}
+\titleformat*{\section}{\Large\bfseries\sffamily}
+\titleformat*{\subsection}{\large\bfseries\sffamily}
+\titleformat*{\subsubsection}{\normalsize\bfseries\sffamily}
+
+
+% ------------ listing setup ------------
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{lightgray},   
+	commentstyle=\color{darkgray},
+	keywordstyle=\color{purple},
+	numberstyle=\tiny\color{darkgray},
+	stringstyle=\color{teal},
+	basicstyle=\color{black}\ttfamily\footnotesize\linespread{2.5},
+	breakatwhitespace=false,         
+	breaklines=false,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=2pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=3
+}
+\lstset{style=mystyle}
+
+% ------ set metadata ------ 
+\hypersetup{
+pdftitle={mytitle},
+pdfsubject={mysubject},
+pdfauthor={myname},
+pdfkeywords={keywords},
+}
+
+% ------------ figure setup ------------
+% set the figure folder
+\graphicspath{{./figs}}
+\captionsetup[figure]{labelformat=simple, labelsep=quad}
+
+% ------------ references setup ------------
+\addbibresource{refs.bib}
+
+% ------------ names setup ------------
+\newcommand{\nameChap}{Capítulo}
+\newcommand{\nameSec}{Seção}
+\newcommand{\nameAppendix}{Apêndice}
+\newcommand{\nameTable}{Tabela}
+\newcommand{\nameFigure}{Figura}
+\newcommand{\nameEq}{Equação}
+\newcommand{\nameBox}{Quadro}
+\newcommand{\nameCode}{Algoritmo}
+
+% ------------ glossary setup ------------
+\makeglossaries
+
+% define terms
+% realismo pragmático
+\newglossaryentry{prag-realism}
+{
+    name=\textbf{realismo pragmático},
+    description={Denominação proposta por Keith Beven para o realismo implícito corrente entre os usuários de modelos ambientais. Nessa filosofia, se aceita que os modelos providenciam representações aproximadas da realidade e que podem melhorar à medida que novas tecnologias tornam-se disponíveis}
+}
+% racionalismo
+\newglossaryentry{rationalism}
+{
+    name=\textbf{racionalismo},
+    description={Corrente filosófica que defende a superioridade da lógica dedutiva, intuitiva e inata ao conhecimento humano, para a justificativa da verdade de teorias. Essa corrente faz oposição ao empirismo}
+}
+% empirismo
+\newglossaryentry{empiricism}
+{
+    name=\textbf{empirismo},
+    description={Corrente filosófica que defende a que a origem de todo conhecimento é a experiência empírica, ou seja, observações sobre o mundo externo à mente. Essa corrente faz oposição ao racionalismo}
+}
+% problema da justificação
+\newglossaryentry{problem-just}
+{
+    name=\textbf{problema da justificação},
+    description={Dificuldade de se estabelecer a verdade de um determinado conhecimento ou teoria}
+}
+% teoria
+\newglossaryentry{teoria}
+{
+    name=\textbf{teoria},
+    description={Na epistemologia, consiste em um enunciado universal (ou sistema de enunciados) que estabelece definitivamente a verdade de um fenômeno}
+}
+% hipotese
+\newglossaryentry{hipotese}
+{
+    name=\textbf{hipótese},
+    description={Enunciado universal em estágio probatório para ser alçado ao \textit{status} de teoria a partir da sua confirmação}
+}
+% inferencia dedutiva
+\newglossaryentry{infer-dedu}
+{
+    name=\textbf{inferência dedutiva},
+    description={Operação da Lógica que estabelece a verdade de um dado enunciado a partir de premissas antecedentes. A verdade do enunciado consequente só é garantida desde que suas premissas antecedentes sejam também verdadeiras}
+}
+% inferencia indutiva
+\newglossaryentry{infer-indu}
+{
+    name=\textbf{inferência indutiva},
+    description={Raciocínio baseado em uma generalização ou extrapolação que estabelece um enunciado universal a partir de enunciados singulares. A verdade do enunciado universal não é garantida, mas apresenta graus de probabilidade}
+}
+% infinite regress
+\newglossaryentry{problem-regress}
+{
+    name=\textbf{problema da regressão infinita},
+    description={Dificuldade de se estabelecer a origem última do conhecimento lógico ou racional, tendo em vista que todas as premissas precisam ser deduzidas de outras premissas mais primordiais, fato que leva a um encadeamento infinito (ou circular) de premissas}
+}
+% problema da indução
+\newglossaryentry{problem-indu}
+{
+    name=\textbf{problema da indução},
+    description={Também chamado de \textbf{problema da indução de Hume}. Argumento circular inválido que surge da justificação do conhecimento indutivo pelo princípio da uniformidade, pois evoca o próprio conhecimento indutivo para se sustentar}
+}
+% princípio da uniformidade
+\newglossaryentry{principio-uniform}
+{
+    name=\textbf{princípio da uniformidade},
+    description={Suposição de que as mesmas regularidades naturais observadas empiricamente no passado serão as mesmas a serem observadas no futuro. Ou seja, de que a natureza é previsível a partir de seu passado, que nenhuma mudança arbitrária ocorrerá em suas leis (por exemplo, a Terra simplesmente parar de girar)}
+}
+% grau de conviccao
+\newglossaryentry{grau-convic}
+{
+    name=\textbf{grau de convicção},
+    description={Conceito central no epistemologia bayesiana que decorre da ideia de que o conhecimento não é uma questão de tudo ou nada, mas que apresenta sutilezas entre o verdadeiro e o falso. Esse conceito pode ser considerado uma probabilidade sob certas circunstâncias}
+}
+% espaco de possibilidades
+\newglossaryentry{espaco-possib}
+{
+    name=\textbf{espaço de possibilidades},
+    description={Conjunto de possibilidades gerado entre hipóteses e evidências na epistemologia bayesiana. Para se aplicar a matemática das probabilidades sobre esse conjunto, é preciso que as possibilidades sejam \textit{mutuamente excludentes} (não podem ser verdadeiras ao mesmo tempo) e \textit{conjuntamente exaustivas} (pelo menos uma delas é verdadeira)}
+}
+% princípio do probabilismo
+\newglossaryentry{princip-prob}
+{
+    name=\textbf{princípio do probabilismo},
+    description={Princípio utilizado na epistemologia bayesiana para tratar os graus de convicção como probabilidaes. Ele apresenta três axiomas: a não-negatividade; a normalização, e; a aditividade}
+}
+% probabilidade anterior
+\newglossaryentry{prior}
+{
+    name=\textbf{probabilidade anterior},
+    description={Probabilidade que de a hipótese $H$ é verdadeira antes de considerar a probabilidade de que a evidência favorável $E$ é verdadeira. Denotada como $P(H)$}
+}
+% probabilidade posterior
+\newglossaryentry{posterior}
+{
+    name=\textbf{probabilidade posterior},
+    description={Probabilidade que de a hipótese $H$ é verdadeira depois de considerar a probabilidade de que a evidência favorável $E$ é verdadeira. Denotada como $P(H | E)$}
+}
+% verossimilhança
+\newglossaryentry{likelihood}
+{
+    name=\textbf{verossimilhança},
+    description={Probabilidade de que a evidência $E$ é verdadeira depois de considerar a probabilidade da hipótese $H$ ser verdadeira. Denotada por $P(E | H)$}
+}
+% princípio da condicionalização
+\newglossaryentry{princip-cond}
+{
+    name=\textbf{princípio da condicionalização},
+    description={Princípio utilizado na epistemologia bayesiana para atualizar os graus de convicção em hipóteses a partir das evidências. Para manter a concordância com o princípio do probabilismo, a condicionalização implica em zerar, escalonar e normalizar os valores das probabilidades atualizadas}
+}
+% Teorema de Bayes
+\newglossaryentry{bayes-theorem}
+{
+    name=\textbf{teorema de Bayes},
+    description={Formulação matemática para a determinação da propabilidade posterior: $P(H | E) = P(H) \cdot P(E | H) / P(E)$, que siginifica $\text{Posterior} = \text{Anterior} \times \text{Verossimilhança} \div \text{Evidência}$}
+}
+% Condicionamento
+\newglossaryentry{conditioning}
+{
+    name=\textbf{condicionamento},
+    description={[sinônimo de condicionalização]Aplicação do Teorema de Bayes sobre uma hipótese, de forma a se atualizar o seu grau de convicção. Pode ser realizado em etapas sucessivas, à medida que novas evidências são obtidas}
+}
+% positivismo logico
+\newglossaryentry{positivismo}
+{
+    name=\textbf{positivismo lógico},
+    description={Movimento filosófico empirista do início do século XX, também chamado de empirismo lógico}
+}
+% problema dos anteriores
+\newglossaryentry{problem-priors}
+{
+    name=\textbf{problema dos anteriores},
+    description={Dificuldade de se justificar a definição incial dos grau de convição em uma hipótese antes de obter qualquer evidência. Na epistemologia bayesiana, soluções para esse problema são propostas principalmente por duas abordagens: a objetiva e a subjetiva}
+}
+% bayesianismo subjetivo
+\newglossaryentry{bayes-sub}
+{
+    name=\textbf{bayesianismo subjetivo},
+    description={Corrente da epistemologia bayesiana que defende que qualquer distribuição anterior é válida, desde que não se viole o princípio do probabilismo}
+}
+% bayesianismo objetivo
+\newglossaryentry{bayes-obj}
+{
+    name=\textbf{bayesianismo objetivo},
+    description={Corrente da epistemologia bayesiana que defende que a distribuição anterior deve ser definida de forma a se observar o princípio da indiferença}
+}
+% principio da indiferenca
+\newglossaryentry{princip-indif}
+{
+    name=\textbf{princípio da indiferença},
+    description={Princípio adotado pela corrente objetiva do bayesianismo que estabelece que o grau de convição em duas ou mais hipóteses deve ser igual desde que não existam razões para o contrário. Ou seja, diante da ignorância completa, a distribuição anterior deve ser uniforme}
+}
+% incertezas estatísticas
+\newglossaryentry{uncert-stats}
+{
+    name=\textbf{incerteza estatística},
+    description={Incerteza decorrente do ruído aleatório existente nos dados observados. Esse tipo de incerteza apresenta características estatísticas estacionárias que podem ou não ser estruturadas com viés, heteroscedasticidade e auto-correlação. De uma forma ou de outra, essa incerteza pode ser modelada por distribuições de probabilidade}
+}
+% curvas-chave
+\newglossaryentry{rating-curve}
+{
+    name=\textbf{curvas-chave},
+    description={Relação funcional entre o nível e a vazão de um rio ou canal em uma determinada seção. Em geral, a seguinte função potência é utilizada: $Q = a(h - h_0)^b$, em que $Q$ é a vazão; $h$ é o nível, e; $a$, $b$ e $h_0$ são os parâmetros ajustados pelos dados observados}
+}
+% modelo
+\newglossaryentry{model}
+{
+    name=\textbf{modelo},
+    description={Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}
+}
+% Teorema do Limite Central
+\newglossaryentry{theorem-central-limit}
+{
+    name=\textbf{teorema do limite central},
+    description={Teorema que estabelece o fato matemático que a média amostral de qualquer população apresenta distribuição normal. Não importa qual a distribuição da população (uniforme, normal, etc), a média obtida de amostras será normalmente distribuída. Esse fato acontece porque a média é uma soma, e em somas de números aleatórios os valores baixos amostrados tendem a compensar os valores altos, resultando em um padrão de sino invertido parecido com a distribuição normal}
+}
+% simulações de Monte Carlo
+\newglossaryentry{monte-carlo}
+{
+    name=\textbf{simulações de Monte Carlo},
+    description={Método numérico em que são realizadas inúmeras reamostragens estatisticamente equivalentes para se estimar o comportamento final de um modelo envolvendo variáveis aleatórias (ou seja, quando $n \to \infty$). O nome Monte Carlo se refere a um cassino de Mônaco, em alusão ao fato de se realizar inúmeras jogadas para se fazer uma análise estatística robusta}
+}
+% modelo estatístico
+\newglossaryentry{model-stats}
+{
+    name=\textbf{modelo estatístico},
+    description={Um modelo estatístico é uma teoria específica sobre o comportamento matemático dos dados, sem vínculos teóricos sobre os fenômenos subjacentes}
+}
+% racionalismo crítico
+\newglossaryentry{critical-rationalism}
+{
+    name=\textbf{racionalismo crítico},
+    description={Corrente filosófica racionalista proposta por Karl Popper que estabelece a falseabilidade como critério de demarcação de teorias científicas. Nessa visão, o poder das evidências empíricas está em justificar, por lógica dedutiva, a falsidade de teorias (nunca a verdade). Por exemplo, basta apenas um único cisne negro para que a teoria de que todos os cisnes são brancos ser considerada falsa. Enquanto não são refutadas, as teorias são apenas corroboradas pelas evidências}
+}
+% problema da demarcação
+\newglossaryentry{problem-demarc}
+{
+    name=\textbf{problema da demarcação},
+    description={Dificuldade de estabelecer a diferença entre uma teoria científica de uma teoria apenas metafísica, que se baseia apenas em abstrações puras}
+}
+% falseabilidade
+\newglossaryentry{falseabilidade}
+{
+    name=\textbf{falseabilidade},
+    description={Capacidade de uma teoria ser demonstrada falsa a partir da experiência empírica (observações e experimentos). Uma teoria falseável não é \textit{necessariamente} falsa, mas \textit{pode} ser considerada falsa de evidências empíricas. No racionalismo crítico, essa capacidade é o critério de demarcação para uma teoria ser considerada científica}
+}
+% contexto da justificação
+\newglossaryentry{contexto-justificacao}
+{
+    name=\textbf{contexto da justificação},
+    description={Perspectiva da Filosofia da Ciência que se trata do problema da justificação da verdade de teorias}
+}
+% contexto da descoberta
+\newglossaryentry{contexto-descoberta}
+{
+    name=\textbf{contexto da descoberta},
+    description={Perspectiva da Filosofia da Ciência que se trata do problema de entender a mudança de teorias na História}
+}
+% comunidade
+\newglossaryentry{comunidade-cientifica}
+{
+    name=\textbf{comunidade científica},
+    description={As pessoas que exercem a Ciência na prática em um dado período da História. Pode ser a totalidade de cientistas ou um subconjunto específico de alguma área do conhecimento. Thomas Kuhn argumenta que durante certos períodos históricos a comunidade científica é caracterizada por compartilhar um paradigma}
+}
+% paradigma
+\newglossaryentry{paradigma}
+{
+    name=\textbf{paradigma},
+    description={Conceito articulado por Thomas Kuhn que se refere ao conjunto de soluções exemplares para problemas de pesquisa, ou seja, um sistema de teorias, instrumentos e práticas auxiliares que resolvem muito bem certos problemas amplamente aceitos e são promissores para resolver problemas controversos em aberto com grande apelo competitivo}
+}
+% ciencia normal
+\newglossaryentry{ciencia-normal}
+{
+    name=\textbf{ciência normal},
+    description={Conceito articulado por Thomas Kuhn que se refere ao período histórico em que uma dada comunidade científica compartilha o mesmo paradigma. A ciência normal tender a acabar em uma crise que é seguida da revolução imposta pelo advento de um novo paradigma}
+}
+% incomensurabilidade
+\newglossaryentry{incomensu}
+{
+    name=\textbf{incomensurabilidade},
+    description={Conceito articulado por Thomas Kuhn que se refere ao problema de comunicação intelectual entre diferentes paradigmas. Dois paradigmas são fundamentalmente diferentes de maneira que é precária a comparação entre seus conceitos (mesmo que apresentem o mesmo nome e mesmo símbolo matemático)}
+}
+% realismo científico
+\newglossaryentry{realism-sci}
+{
+    name=\textbf{realismo científico},
+    description={Corrente da Filosofia da Ciência que defende a tese de que o propósito da Ciência é providenciar teorias que são descrições verdadeiras da realidade}
+}
+% realismo
+\newglossaryentry{realism}
+{
+    name=\textbf{realismo},
+    description={Concepção metafísica que admite a existência da realidade objetiva, ou seja, que a realidade não depende de ninguém para observá-la}
+}
+% idealismo
+\newglossaryentry{idealism}
+{
+    name=\textbf{idealismo},
+    description={Concepção metafísica que faz oposição ao realismo. Nessa perspectiva, que pode ter interpretações ontológicas ou epistemológicas, a realidade é entendida como um produto subjetivo da mente}
+}
+% instrumentalismo
+\newglossaryentry{instrument}
+{
+    name=\textbf{instrumentalismo},
+    description={Corrente da Filosofia da Ciência radicalmente empirista que faz oposição ao realismo científico. Essa corrente defende que o objetivo da Ciência é produzir teorias que sejam adequadas empiricamente e apenas isso. Seu argumento é que adequação empírica não implica uma descrição verdadeira da realidade}
+}
+% problema da subdeterminação
+\newglossaryentry{problem-subdet}
+{
+    name=\textbf{problema da subdeterminação},
+    description={Dificuldade de garantir que as evidências observadas determinem a verdade de uma teoria sem que existam outras teorias empiricamente equivalentes}
+}
+% inferência à melhor explicação
+\newglossaryentry{ibe}
+{
+    name=\textbf{inferência à melhor explicação},
+    description={[sinônimo de abdução] Raciocínio não-dedutivo que busca definir a hipótese que melhor explica as evidências empíricas.}
+}
+% heurística
+\newglossaryentry{heuristic}
+{
+    name=\textbf{heurística},
+    description={Conjunto de técnicas de solução de problemas que não garantem uma solução ótima ou racional, mas são suficientes para atingir os propósitos práticos da tomada de decisão. O principal exemplo é a solução de problemas por tentativa e erro}
+}
+% problema da equifinalidade
+\newglossaryentry{problem-equifinal}
+{
+    name=\textbf{problema da equifinalidade},
+    description={Notação de Keith Beven para a versão branda do problema da subdeterminação no caso de modelos numéricos ambientais. A subdeterminação dos modelos ocorre porque as informações sobre os processos modelados são incompletas, fato que garante a existência de estruturas de modelos que são empiricamente equivalentes, ou equifinais}
+}
+% hipóteses auxiliares
+\newglossaryentry{aux-hyp}
+{
+    name=\textbf{hipóteses auxiliares},
+    description={Conjunto de hipóteses necessárias para além da hipótese principal de um modelo}
+}
+% equação do erro total
+\newglossaryentry{eq-total-error}
+{
+    name=\textbf{equação do erro total},
+    description={Equação que inclui todas as fontes de erros em um modelo, tanto estatísticas quanto epistêmicas}
+}
+% modelos empiricamente equivalentes
+\newglossaryentry{emp-eq-model}
+{
+    name=\textbf{modelos empiricamente equivalentes},
+    description={Modelos diferentes mas que apresentam resultados simulados que não apresentam desvios significativos diante do erro observacional total. Nesse caso, não existe razão empírica para favorecer um modelo de outro, pelo menos em relação à hipótese principal dos modelos}
+}
+% modelo empiricamente aceitável
+\newglossaryentry{emp-acc-model}
+{
+    name=\textbf{modelo empiricamente aceitável},
+    description={Modelo que apresenta resultados simulados que satisfazem as observações empíricas com um nível de confiança pré-estabelecido}
+}
+% inequação de encapsulamento
+\newglossaryentry{eq-bracketing}
+{
+    name=\textbf{inequação de encapsulamento},
+    description={Inequação utilizada para se testar se um modelo é empiricamente aceitável. Os resultados simulados do modelos devem ser encapsulados pelas bandas de incerteza das observações (erro observacional total) com um nível de confiança pré-definido (critério de rejeição)}
+}
+% processo de calibração
+\newglossaryentry{proc-calib}
+{
+    name=\textbf{processo de calibração},
+    description={Procedimento de ajuste dos parâmetros de um modelo para se aumentar o seu grau de confirmação diante das evidências empíricas}
+}
+% incerteza empírica
+\newglossaryentry{uncert-empirical}
+{
+    name=\textbf{incerteza empírica},
+    description={Componente científico das incertezas no processo de tomada de decisão em políticas baseadas em evidências. Consiste no conjunto de incertezas epistêmicas e estatísticas sobre o estado do mundo. Outras componentes não-empíricas são: incerteza ética e incerteza política}
+}
+% EBP
+\newglossaryentry{ebp}
+{
+    name=\textbf{políticas baseadas em evidências},
+    description={Conceito de políticas públicas que buscam suporte total ou parcial em evidência objetivas para guiar a tomada de decisão e alocação de recursos}
+}
+\newglossaryentry{uncert-episteme}
+{
+    name=\textbf{incerteza epistêmica},
+    description={Conceito geral que se refere às diversas incertezas não-estatísticas existentes no processo de modelagem. Ao contrário da incerteza estatística, que se refere às informações disponíveis, a incerteza epistêmica está associada às informações indisponíveis}
+}
+\newglossaryentry{error-measure}
+{
+    name=\textbf{erro de medição},
+    description={Incerteza estatística decorrente da medição de evidências empíricas}
+}
+\newglossaryentry{error-commensu}
+{
+    name=\textbf{erro de comensurabilidade},
+    description={Incerteza epistêmica decorrente da diferença entre escalas no tempo e no espaço dos processos observados e os processos modelados}
+}
+\newglossaryentry{error-input}
+{
+    name=\textbf{erro dos dados de entrada},
+    description={Incerteza estatística e epistêmica associada aos dados utilizados para a configuração do modelo. Por exemplo: dados de chuva apresentam incerteza estatística da medição e a incerteza epistêmica da sua interpolação espacial}
+}
+\newglossaryentry{error-struct}
+{
+    name=\textbf{erro estrutural do modelo},
+    description={Incerteza epistêmica associada aos conceitos teóricos e aos procedimentos computacionais empregados em um dado modelo}
+}
+\newglossaryentry{error-obs}
+{
+    name=\textbf{erro observacional efetivo},
+    description={Superposição do erro de medição e o erro de comensurabilidade, representado a incerteza que o modelo deve ser submetido para se avaliar a sua adequação empírica}
+}
+
+% ---------------- define acronyms ------------------------
+\newacronym{glue}{\texttt{GLUE}}{\textit{Generalized Likelihood Uncertantiy Estimation}}
+\newacronym{gcd}{GCD}{Greatest Common Divisor}
+\newacronym{lcm}{LCM}{Least Common Multiple}
+
+
+% ------------ nomenclature setup ------------
+% This code creates the groups
+\usepackage{etoolbox}
+\renewcommand\nomgroup[1]{%
+  \item[\bfseries
+  \ifstrequal{#1}{E}{Capítulo 1}{%
+  \ifstrequal{#1}{H}{Hidrologia}{%
+  \ifstrequal{#1}{O}{Outros símbolos}{}}}%
+]}
+% -----------------------------------------
+\makenomenclature
+
+\usepackage{subfiles} % Best loaded last in the preamble
+
+% ------------ main document ------------ 
+\begin{document}
+% Set the page style to "fancy"...
+\pagestyle{fancy}
+%... then configure it.
+\fancyhead{} % clear all header fields
+\fancyhead[L]{\sffamily{\nouppercase{\leftmark}}}
+\fancyfoot{} % clear all footer fields
+\fancyfoot[R]{\thepage}
+
+\pagenumbering{roman}
+
+% ---------------- First Pages ---------------- 
+% cover
+\subfile{cover_a}	
+
+% contra capa
+\subfile{cover_b}
+
+% ficha catalografica
+%\subfile{cover_b}
+
+% assinaturas da banca
+%\subfile{cover_b}
+
+% agradecimentos
+%\subfile{cover_b}
+
+% ---------------- Document map ---------------- 
+% table of contents
+\thispagestyle{empty}
+\tableofcontents
+\clearpage	
+	
+% list of figures
+\listoffigures
+\clearpage
+
+% list of tables
+\listoftables
+\clearpage
+
+% list of acron
+\printglossary[type=\acronymtype]
+\clearpage
+
+% ---------------- Symbols ---------------- 
+% ------  Epistemology Chapter
+\nomenclature[E]{\(S\)}{Enunciado}
+\nomenclature[E]{\(\Omega\)}{Espaço de possibilidades}
+\nomenclature[E]{\(H\)}{Hipótese}
+\nomenclature[E]{\(E\)}{Evidência}
+\nomenclature[E]{\(P\)}{Probabilidade}
+\nomenclature[E]{\(M\)}{Modelo}
+\nomenclature[E]{\(O\)}{Observação}
+\nomenclature[E]{\(\Theta\)}{Vetor de parâmetros}
+\nomenclature[E]{\(\Upsilon\)}{Vetor de dados de entrada}
+\nomenclature[E]{\(\varepsilon\)}{Erro}
+\nomenclature[E]{\(\mu\)}{Média}
+\nomenclature[E]{\(\sigma^2\)}{Variância}
+\nomenclature[E]{\(s^2\)}{Variância amostral}
+\nomenclature[E]{\(n\)}{Tamanho amostral}
+
+% ------  Hydrology
+\nomenclature[H]{\(Q\)}{Vazão}
+
+\printnomenclature
+\clearpage
+
+% ---------------- Thesis Epigraph ---------------- 
+%\subfile{epigraph}
+
+% ---------------- Chapters setup ---------------- 
+\linenumbers % start line numeration
+\modulolinenumbers[5]
+%\doublespacing % line spacing	
+\pagenumbering{arabic} % start arabic numeration
+
+% ---------------- Chapters ---------------- 
+%\subfile{chap_episteme_cover}
+\subfile{chap_intro}
+
+\subfile{chap_episteme_cover}
+\subfile{chap_episteme}
+
+%\subfile{chap_systems}
+
+%\subfile{chap_hydrology}
+
+%\subfile{chap_ecoeco}
+
+%\subfile{chap_decisions}
+
+%\subfile{chap_fancy}
+
+%\subfile{chap_simple}
+
+\nolinenumbers
+%%%% \singlespacing
+
+% ---------------- Glossary ---------------- 
+\clearpage
+
+\printglossary[title=Glossário, toctitle=Glossário]
+
+\clearpage
+% ---------------- References ---------------- 
+\printbibliography
+
+% ---------------- Appendix ---------------- 
+\begin{comment}
+\begin{appendices}
+
+\subfile{chap_simple}
+
+\clearpage
+
+\end{appendices}
+\end{comment}
+
+
+\end{document}
+
+
+

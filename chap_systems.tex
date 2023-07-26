@@ -1,0 +1,108 @@
+\documentclass[./main.tex]{subfiles}
+\graphicspath{{\subfix{./figs}}}
+
+% ------------ main document ------------ 
+\begin{document}
+
+\chapter{Sistemas e Modelos de Sistemas} \label{chap:systems}
+
+\epigraph{Quanto mais rápido, mais rápido}{C-J}
+
+\epigraph{Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur at mollis eros. Integer ornare erat neque, id finibus velit ultrices in. Suspendisse dapibus tortor eget lorem pretium venenatis.}{Alguém importante}
+
+\section{A teoria geral dos sistemas}
+\par Texto.
+
+\section{Fluxos livres}
+\par Um bom ponto de partida no âmbito da dinâmica de sistemas é analisar modelos de sistemas de apenas um compartimento, como o é o caso do reservatório com fluxos livres de entrada e saída. Os fluxos de entrada e saída são ditos \textit{livres} pois definem-se externamente ao sistema: não estão vinculados ao armazenamento. Esse modelo pode representar o comportamento de diversas variáveis reais diferentes, como água em um reservatório, mercadorias em um inventário ou clientes em um restaurante. No caso do reservatório de água com volume armazenado $S$, podemos imaginar o fluxo de entrada $I$ sendo o deságue de um rio e o fluxo de saída $Q$ o bombeamento de água para irrigação. A variação instantânea do volume armazenado no tempo, assim, é a diferença entre o fluxo de entrada e o fluxo de saída:		
+\[\frac{dS}{dt} = I - Q \]
+Em uma simulação com intervalos de tempo discretos $\Delta t$, o volume futuro é a soma do volume atual com o volume de entrada, descontando-se o volume de saída:
+\begin{equation} 
+	\label{eq:sis_linear_numerics}
+	S_{t+1} = S_{t} + I_{t}\Delta t - Q_{t}\Delta t \quad \forall t
+\end{equation} 
+
+\par Por ser um sistema físico, o volume armazenado é sempre maior ou igual que o volume mínimo de armazenamento $s_{min}$ e sempre menor ou igual que o volume máximo de armazenamento $s_{max}$:
+\[0 \le s_{min} \le S \le s_{max}\]
+A diferença entre o volume máximo e o volume mínimo define a \textit{capacidade de armazenamento} $c_S$ do reservatório ($c_S = s_{max} -  s_{min}$). Tais restrições físicas criam \textbf{condições limítrofes} que produzem impactos sobre os \textit{fluxos reais} de entrada e de saída, especialmente quando se faz uso de intervalos de tempo discretos. Assim, quando o reservatório está quase cheio, parte do volume de entrada é \textit{extravazado}, o que introduz o fluxo de excesso $E$. Por outro lado, quando o reservatório está quase vazio, o volume de saída é reduzido ao que resta de água disponível. Por essa perspectiva, os fluxos livres de entrada e saída são tidos como \textit{fluxos potenciais}, que podem ou não ser \textit{atendidos}, a depender das condições de armazenamento do reservatório. 
+
+\par Nesse tipo de sistema, os fluxos de entrada e de saída controlam o \textit{comportamento final} do volume armazenado. Nas circunstâncias excepcionais em que o fluxo de entrada e de saída são exatamente idênticos (ou nulos), o volume armazenado permanece constante ($S \to S$). No restante das condições, ou o reservatório tende a se encher ($S \to s_{max}$), ou o reservatório tende se esvaziar ($S \to s_{min}$), a depender da prevalência do fluxo de entrada sobre o fluxo de saída. Quando o reservatório está cheio ($S = s_{max}$), todo fluxo de entrada é extravazado. Quando o reservatório está vazio ($S = s_{min}$), o fluxo de saída resume-se ao fluxo de entrada. 
+
+\par A rapidez do comportamento do reservatório é controlada pela magnitude relativa da capacidade de armazenamento $c_S$. Um reservatório com capacidade de armazenamento muito grande (em relação aos fluxos) irá apresentar mudanças imperceptíveis, ou muito lentas. Nesse caso, o volume inicial armazenado na simulação faz uma grande diferença no comportamento do sistema. Já um reservatório com capacidade de armazenamento muito pequena (em relação aos fluxos), irá apresentar variações bruscas entre os extremos de completamente cheio e completamente vazio. Aqui, o volume inicial armazenado não faz muita diferença, pois em pouco tempo o reservatório estará cheio ou vazio. 
+
+\par O modelo pode ser expandido para representar múltiplos fluxos livres de entrada e de saída. No caso do reservatório de água, mais de um rio pode alimentar o reservatório e mais de um usuário pode retirar a água para seu consumo. Portanto, em uma simulação com intervalos discretos $\Delta t$, com $N$ fluxos de entrada e $M$ fluxos de saída:
+\begin{equation} 
+	\label{eq:sis_linear_numerics_expanded}
+	S_{t+1} = S_{t} + \sum_{i}^{N} I_{t, i}\Delta t - \sum_{i}^{M}Q_{t, i}\Delta t \quad \forall t
+\end{equation} 
+Aqui, as condições limítrofes (reservatório quase cheio ou quase vazio) criadas pelas restrições físicas introduzem alguns dilemas de modelagem. Afinal, nessas condições, como os fluxos reais são \textit{distribuídos} durante o intervalo de tempo simulado? No caso do reservatório de água, é evidente que o aporte dos rios deve ser somado para que o fluxo de excesso $E$ possa ser calculado. Mas isso não é evidente para outros sistemas, como um inventário de mercadorias, ou pessoas em um auditório. Da mesma forma, não é claro como os fluxos de saída do reservatório de água são distribuídos entre os usuários. Uma alternativa é calcular os fluxos reais de forma proporcional aos fluxos potenciais. Mas também pode ser estabelecida uma ordem de prioridade para os fluxos reais. Isso irá depender da concepção geral do sistema modelado.
+   
+\section{Retroalimentação e atratores}   
+
+\par Um passo adicional no entendimento da dinâmica de sistemas consiste em vincular os fluxos de entrada e saída ao próprio armazenamento. Criam-se, assim, \textit{laços de retroalimentação} dos fluxos sobre o armazenamento. Esses laços introduzem \textbf{atratores}, que dirigem o comportamento final de um dado sistema em certas direções. O sistema passa a exibir um \textit{comportamento intrínseco}. 
+
+\par Um exemplo simples é a dinâmica populacional de uma determinada espécie sem restrições ambientais. Nesse caso, existem dois atratores: um que faz a população ser extinta e outro que faz a população crescer vertiginosamente. A única maneira da população permanecer em equilíbrio é compensar as mortes com um númeo exato de nascimentos. Mas esse equilíbrio é instável: uma pequena perturbação é suficiente para o sistema ser capturado por um dos atratores. Colocando esse exemplo em termos matemáticos, podemos imaginar que a população $P$ a cada geração aumenta com o fluxo de indivíduos $B$ que nascem (a \textit{taxa de natalidade}) e diminui com fluxo dos indivíduos $D$ que morrem (a \textit{taxa de mortalidade}). Considerando-se gerações discretas em intervalos de tempo $\Delta t$, a população da geração futura é a soma da geração atual com os indivíduos que nasceram, descontando-se os indivíduos que morreram:
+\begin{equation} 
+	\label{eq:sis_pop_numerics}
+	P_{t+1} = P_{t} + B_{t}\Delta t - D_{t}\Delta t \quad \forall t
+\end{equation}
+Até aqui o sistema aparenta ser análogo ao reservatório de água com fluxos livres, com as diferenças que o tempo é discreto em gerações e que a restrição física é que a população não pode ser negativa:
+\[P \ge 0 \]
+Mas a situação muda completamente ao se estabelecer que as novas gerações de indivíduos não surgem de fora do sistema, \textit{mas da própria geração anterior}. Assim, a taxa de natalidade é diretamente propocional à população em uma dada geração:
+\begin{equation} 
+	\label{eq:sis_pop_births}
+	B_t = P_t/b \quad \forall t
+\end{equation}
+Em que $b$ (unidades de $\Delta t$) é a meia-vida para os nascimentos. Por exemplo: uma população de 10 indivíduos ($P$) com $b=2$ irá produzir 5 filhos ($B$) no intervalo de uma geração. A mesma lógica se aplica para a taxa de mortalidade:
+\begin{equation} 
+	\label{eq:sis_pop_deaths}
+	D_t = P_t/d \quad \forall t
+\end{equation}
+Em que $d$ (unidades de $\Delta t$) é a meia-vida para as mortes.
+Substituindo-se a Eq. \ref{eq:sis_pop_births} e a Eq. \ref{eq:sis_pop_deaths} na Eq. \ref{eq:sis_pop_numerics}:
+
+\[P_{t+1} = P_{t} + (P_t/b)\Delta t - (P_t/d)\Delta t\]
+Manipulando-se:
+\[P_{t+1} = (1 + \Delta t(1/b - 1/d)) \cdot P_{t} \]
+E simplificando-se:
+\begin{equation} 
+	\label{eq:sis_pop_equivalent}
+	P_{t+1} = r\cdot P_{t} \quad \forall t
+\end{equation}
+Em que $r$ (adimensional) é o \textit{fator de crescimento efetivo} da população. 
+
+\par Nesse sistema, o fator de crescimento efetivo controla o comportamento final da população. Nas condições excepcionais em que a taxa de natalidade é exatamente igual à taxa de mortalidade, $r = 1$ e a população tende a se manter constante em um equilíbrio instável ($P \to P$). Agora, se $r < 1$, isso quer dizer que a taxa de mortalidade prevalesce sobre a taxa de natalidade. Nesse caso, a população tende a se extinguir ($P \to 0$) em uma trajetória que é rápida inicialmente mas que reduz sua velocidade à medida que a população declina, em um processo estabilizador de retroalimentação \textit{negativa}. Por fim, se $r > 1$, a taxa de natalidade é superior à taxa de mortalidade. Nessa situação, a população cresce de forma acelerada ($P \to +\infty$), pois a cada geração existem mais indivíduos disponíveis para produzir mais novos indivíduos, em um processo desenfreado de retroalimentação \textit{positiva}.	  
+
+\par Como veremos adiante, modelos hidrológicos apresentam laços de retroalimentação negativa em certos fluxos de saída, como a água que é drenada do solo. Isso implica que o sistema é constantemente atraído na direção da depleção dos reservatórios modelados, sejam eles os solos, as rochas, lagos, etc. Apenas os constantes fluxos livres de entrada de água pela precipitação previnem, o tempo todo, que o sistema seque por completo.
+
+\section{Sistemas lineares, não-lineares e caos}
+
+\par Um sistema é \textbf{linear} quando se observa o \textbf{princípio da superposição} em suas operações. A superposição acontece quando o mesmo efeito de duas entradas é obtido ao se operar o sistema em separado e somar os resultados depois:
+\[H(x + y) = H(x) + H(y)\]
+Em que $H$ é um operador linear e $x$ e $y$ são entradas independentes. Essa propriedade torna os sistemas lineares extremamente interessantes para o tratamento analítico e computacional, pois permite que as componentes do sistema sejam resolvidas em separado, para depois se unificar tudo. Nesse tipo de sistema, o todo é reduzido à mera soma das partes.
+
+\par No entanto, e infelizmente, os sistemas lineares constituem uma categoria muito especial e restrita. Na verdade, a vasta maioria dos sistemas são \textbf{não-lineares}. Por separar sistemas muito específicos de \textit{todo o grande resto}, a categorização de sistemas lineares e não-lineares é discutível -- já foi comparada à ideia de categorizar os animais em elefantes e não-elefantes (+REF). Afinal, os sistemas não-lineares podem violar o princípio da superposição por inúmeros motivos diferentes. No caso do sistema do reservatório com fluxos livres, por exemplo, a não-linearidade do sistema surge das as condições limítrofes impostas pelas restrições físicas:   
+
+\par Sistemas não-lineares.
+\par Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur at mollis eros. Integer ornare erat neque, id finibus velit ultrices in. Suspendisse dapibus tortor eget lorem pretium venenatis.
+
+\section{Agentes e irreducibilidade computacional}
+\par Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur at mollis eros. Integer ornare erat neque, id finibus velit ultrices in. Suspendisse dapibus tortor eget lorem pretium venenatis.
+
+\section{Diagnóstico de Modelos}
+\par Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur at mollis eros. Integer ornare erat neque, id finibus velit ultrices in. Suspendisse dapibus tortor eget lorem pretium venenatis.
+
+\clearpage
+
+\section{Resumo do capítulo}
+
+\par Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur at mollis eros. Integer ornare erat neque, id finibus velit ultrices in. Suspendisse dapibus tortor eget lorem pretium venenatis.
+
+\begin{itemize}
+    \item[$\blacksquare$] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur at mollis eros. Integer ornare erat neque, id finibus velit ultrices in. Suspendisse dapibus tortor eget lorem pretium venenatis.
+    \item[$\blacksquare$] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur at mollis eros. Integer ornare erat neque, id finibus velit ultrices in. Suspendisse dapibus tortor eget lorem pretium venenatis.
+    \item[$\blacksquare$] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur at mollis eros. Integer ornare erat neque, id finibus velit ultrices in. Suspendisse dapibus tortor eget lorem pretium venenatis. 
+\end{itemize}
+
+
+\end{document}
