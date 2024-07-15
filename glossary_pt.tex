@@ -1,0 +1,823 @@
+\makeglossaries
+
+% realismo pragmático
+\newglossaryentry{prag-realism}
+{
+    name=\textbf{realismo pragmático},
+    description={Denominação proposta por Keith Beven para o realismo implícito corrente entre os usuários de modelos ambientais. Nessa filosofia, se aceita que os modelos providenciam representações aproximadas da realidade e que podem melhorar à medida que novas tecnologias tornam-se disponíveis}
+}
+% racionalismo
+\newglossaryentry{rationalism}
+{
+    name=\textbf{racionalismo},
+    description={Corrente filosófica que defende a superioridade da lógica dedutiva, intuitiva e inata ao conhecimento humano, para a justificativa da verdade de teorias. Essa corrente faz oposição ao empirismo}
+}
+% empirismo
+\newglossaryentry{empiricism}
+{
+    name=\textbf{empirismo},
+    description={Corrente filosófica que defende a que a origem de todo conhecimento é a experiência empírica, ou seja, observações sobre o mundo externo à mente. Essa corrente faz oposição ao racionalismo}
+}
+% problema da justificação
+\newglossaryentry{problem-just}
+{
+    name=\textbf{problema da justificação},
+    description={Dificuldade de se estabelecer a verdade de um determinado conhecimento ou teoria}
+}
+% teoria
+\newglossaryentry{teoria}
+{
+    name=\textbf{teoria},
+    description={Na epistemologia, consiste em um enunciado universal (ou sistema de enunciados) que estabelece definitivamente a verdade de um fenômeno}
+}
+% hipotese
+\newglossaryentry{hipotese}
+{
+    name=\textbf{hipótese},
+    description={Enunciado universal em estágio probatório para ser alçado ao \textit{status} de teoria a partir da sua confirmação}
+}
+% inferencia dedutiva
+\newglossaryentry{infer-dedu}
+{
+    name=\textbf{inferência dedutiva},
+    description={Operação da Lógica que estabelece a verdade de um dado enunciado a partir de premissas antecedentes. A verdade do enunciado consequente só é garantida desde que suas premissas antecedentes sejam também verdadeiras}
+}
+% inferencia indutiva
+\newglossaryentry{infer-indu}
+{
+    name=\textbf{inferência indutiva},
+    description={Raciocínio baseado em uma generalização ou extrapolação que estabelece um enunciado universal a partir de enunciados singulares. A verdade do enunciado universal não é garantida, mas apresenta graus de probabilidade}
+}
+% infinite regress
+\newglossaryentry{problem-regress}
+{
+    name=\textbf{problema da regressão infinita},
+    description={Dificuldade de se estabelecer a origem última do conhecimento lógico ou racional, tendo em vista que todas as premissas precisam ser deduzidas de outras premissas mais primordiais, fato que leva a um encadeamento infinito (ou circular) de premissas}
+}
+% problema da indução
+\newglossaryentry{problem-indu}
+{
+    name=\textbf{problema da indução},
+    description={Também chamado de \textbf{problema da indução de Hume}. Argumento circular inválido que surge da justificação do conhecimento indutivo pelo princípio da uniformidade, pois evoca o próprio conhecimento indutivo para se sustentar}
+}
+% princípio da uniformidade
+\newglossaryentry{principio-uniform}
+{
+    name=\textbf{princípio da uniformidade},
+    description={Suposição de que as mesmas regularidades naturais observadas empiricamente no passado serão as mesmas a serem observadas no futuro. Ou seja, de que a natureza é previsível a partir de seu passado, que nenhuma mudança arbitrária ocorrerá em suas leis (por exemplo, a Terra simplesmente parar de girar)}
+}
+% grau de conviccao
+\newglossaryentry{grau-convic}
+{
+    name=\textbf{grau de convicção},
+    description={Conceito central no epistemologia bayesiana que decorre da ideia de que o conhecimento não é uma questão de tudo ou nada, mas que apresenta sutilezas entre o verdadeiro e o falso. Esse conceito pode ser considerado uma probabilidade sob certas circunstâncias}
+}
+% espaco de possibilidades
+\newglossaryentry{espaco-possib}
+{
+    name=\textbf{espaço de possibilidades},
+    description={Conjunto de possibilidades gerado entre hipóteses e evidências na epistemologia bayesiana. Para se aplicar a matemática das probabilidades sobre esse conjunto, é preciso que as possibilidades sejam \textit{mutuamente excludentes} (não podem ser verdadeiras ao mesmo tempo) e \textit{conjuntamente exaustivas} (pelo menos uma delas é verdadeira)}
+}
+% princípio do probabilismo
+\newglossaryentry{princip-prob}
+{
+    name=\textbf{princípio do probabilismo},
+    description={Princípio utilizado na epistemologia bayesiana para tratar os graus de convicção como probabilidaes. Ele apresenta três axiomas: a não-negatividade; a normalização, e; a aditividade}
+}
+% probabilidade anterior
+\newglossaryentry{prior}
+{
+    name=\textbf{probabilidade anterior},
+    description={Probabilidade que de a hipótese $H$ é verdadeira antes de considerar a probabilidade de que a evidência favorável $E$ é verdadeira. Denotada como $P(H)$}
+}
+% probabilidade posterior
+\newglossaryentry{posterior}
+{
+    name=\textbf{probabilidade posterior},
+    description={Probabilidade que de a hipótese $H$ é verdadeira depois de considerar a probabilidade de que a evidência favorável $E$ é verdadeira. Denotada como $P(H | E)$}
+}
+% verossimilhança
+\newglossaryentry{likelihood}
+{
+    name=\textbf{verossimilhança},
+    description={Probabilidade de que a evidência $E$ é verdadeira depois de considerar a probabilidade da hipótese $H$ ser verdadeira. Denotada por $P(E | H)$}
+}
+% princípio da condicionalização
+\newglossaryentry{princip-cond}
+{
+    name=\textbf{princípio da condicionalização},
+    description={Princípio utilizado na epistemologia bayesiana para atualizar os graus de convicção em hipóteses a partir das evidências. Para manter a concordância com o princípio do probabilismo, a condicionalização implica em zerar, escalonar e normalizar os valores das probabilidades atualizadas}
+}
+% Teorema de Bayes
+\newglossaryentry{bayes-theorem}
+{
+    name=\textbf{teorema de Bayes},
+    description={Formulação matemática para a determinação da propabilidade posterior: $P(H | E) = P(H) \cdot P(E | H) / P(E)$, que siginifica $\text{Posterior} = \text{Anterior} \times \text{Verossimilhança} \div \text{Evidência}$}
+}
+% Condicionamento
+\newglossaryentry{conditioning}
+{
+    name=\textbf{condicionamento},
+    description={[sinônimo de condicionalização]Aplicação do Teorema de Bayes sobre uma hipótese, de forma a se atualizar o seu grau de convicção. Pode ser realizado em etapas sucessivas, à medida que novas evidências são obtidas}
+}
+% positivismo logico
+\newglossaryentry{positivismo}
+{
+    name=\textbf{positivismo lógico},
+    description={Movimento filosófico empirista do início do século XX, também chamado de empirismo lógico}
+}
+% problema dos anteriores
+\newglossaryentry{problem-priors}
+{
+    name=\textbf{problema dos anteriores},
+    description={Dificuldade de se justificar a definição incial dos grau de convição em uma hipótese antes de obter qualquer evidência. Na epistemologia bayesiana, soluções para esse problema são propostas principalmente por duas abordagens: a objetiva e a subjetiva}
+}
+% bayesianismo subjetivo
+\newglossaryentry{bayes-sub}
+{
+    name=\textbf{bayesianismo subjetivo},
+    description={Corrente da epistemologia bayesiana que defende que qualquer distribuição anterior é válida, desde que não se viole o princípio do probabilismo}
+}
+% bayesianismo objetivo
+\newglossaryentry{bayes-obj}
+{
+    name=\textbf{bayesianismo objetivo},
+    description={Corrente da epistemologia bayesiana que defende que a distribuição anterior deve ser definida de forma a se observar o princípio da indiferença}
+}
+% principio da indiferenca
+\newglossaryentry{princip-indif}
+{
+    name=\textbf{princípio da indiferença},
+    description={Princípio adotado pela corrente objetiva do bayesianismo que estabelece que o grau de convição em duas ou mais hipóteses deve ser igual desde que não existam razões para o contrário. Ou seja, diante da ignorância completa, a distribuição anterior deve ser uniforme}
+}
+% incertezas estatísticas
+\newglossaryentry{uncert-stats}
+{
+    name=\textbf{incerteza estatística},
+    description={Incerteza decorrente do ruído aleatório existente nos dados observados. Esse tipo de incerteza apresenta características estatísticas estacionárias que podem ou não ser estruturadas com viés, heteroscedasticidade e auto-correlação. De uma forma ou de outra, essa incerteza pode ser modelada por distribuições de probabilidade}
+}
+% curvas-chave
+\newglossaryentry{rating-curve}
+{
+    name=\textbf{curva-chave},
+    description={Relação funcional entre o nível e a vazão de um rio ou canal em uma determinada seção. Em geral, a seguinte função potência é utilizada: $Q = a(h - h_0)^b$, em que $Q$ é a vazão; $h$ é o nível, e; $a$, $b$ e $h_0$ são os parâmetros ajustados pelos dados observados}
+}
+% modelo
+\newglossaryentry{model}
+{
+    name=\textbf{modelo},
+    description={Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}
+}
+% Teorema do Limite Central
+\newglossaryentry{theorem-central-limit}
+{
+    name=\textbf{teorema do limite central},
+    description={Teorema que estabelece o fato matemático que a média amostral de qualquer população apresenta distribuição normal. Não importa qual a distribuição da população (uniforme, normal, etc), a média obtida de amostras será normalmente distribuída. Esse fato acontece porque a média é uma soma, e em somas de números aleatórios os valores baixos amostrados tendem a compensar os valores altos, resultando em um padrão de sino invertido parecido com a distribuição normal}
+}
+% simulações de Monte Carlo
+\newglossaryentry{monte-carlo}
+{
+    name=\textbf{simulações de Monte Carlo},
+    description={Método numérico em que são realizadas inúmeras reamostragens estatisticamente equivalentes para se estimar o comportamento final de um modelo envolvendo variáveis aleatórias (ou seja, quando $n \to \infty$). O nome Monte Carlo se refere a um cassino de Mônaco, em alusão ao fato de se realizar inúmeras jogadas para se fazer uma análise estatística robusta}
+}
+% modelo estatístico
+\newglossaryentry{model-stats}
+{
+    name=\textbf{modelo estatístico},
+    description={Um modelo estatístico é uma teoria específica sobre o comportamento matemático dos dados, sem vínculos teóricos sobre os fenômenos subjacentes}
+}
+% racionalismo crítico
+\newglossaryentry{critical-rationalism}
+{
+    name=\textbf{racionalismo crítico},
+    description={Corrente filosófica racionalista proposta por Karl Popper que estabelece a falseabilidade como critério de demarcação de teorias científicas. Nessa visão, o poder das evidências empíricas está em justificar, por lógica dedutiva, a falsidade de teorias (nunca a verdade). Por exemplo, basta apenas um único cisne negro para que a teoria de que todos os cisnes são brancos ser considerada falsa. Enquanto não são refutadas, as teorias são apenas corroboradas pelas evidências}
+}
+% problema da demarcação
+\newglossaryentry{problem-demarc}
+{
+    name=\textbf{problema da demarcação},
+    description={Dificuldade de estabelecer a diferença entre uma teoria científica de uma teoria apenas metafísica, que se baseia apenas em abstrações puras}
+}
+% falseabilidade
+\newglossaryentry{falseabilidade}
+{
+    name=\textbf{falseabilidade},
+    description={Capacidade de uma teoria ser demonstrada falsa a partir da experiência empírica (observações e experimentos). Uma teoria falseável não é \textit{necessariamente} falsa, mas \textit{pode} ser considerada falsa de evidências empíricas. No racionalismo crítico, essa capacidade é o critério de demarcação para uma teoria ser considerada científica}
+}
+% contexto da justificação
+\newglossaryentry{contexto-justificacao}
+{
+    name=\textbf{contexto da justificação},
+    description={Perspectiva da Filosofia da Ciência que se trata do problema da justificação da verdade de teorias}
+}
+% contexto da descoberta
+\newglossaryentry{contexto-descoberta}
+{
+    name=\textbf{contexto da descoberta},
+    description={Perspectiva da Filosofia da Ciência que se trata do problema de entender a mudança de teorias na História}
+}
+% comunidade
+\newglossaryentry{comunidade-cientifica}
+{
+    name=\textbf{comunidade científica},
+    description={As pessoas que exercem a Ciência na prática em um dado período da História. Pode ser a totalidade de cientistas ou um subconjunto específico de alguma área do conhecimento. Thomas Kuhn argumenta que durante certos períodos históricos a comunidade científica é caracterizada por compartilhar um paradigma}
+}
+% paradigma
+\newglossaryentry{paradigma}
+{
+    name=\textbf{paradigma},
+    description={Conceito articulado por Thomas Kuhn que se refere ao conjunto de soluções exemplares para problemas de pesquisa, ou seja, um sistema de teorias, instrumentos e práticas auxiliares que resolvem muito bem certos problemas amplamente aceitos e são promissores para resolver problemas controversos em aberto com grande apelo competitivo}
+}
+% ciencia normal
+\newglossaryentry{ciencia-normal}
+{
+    name=\textbf{ciência normal},
+    description={Conceito articulado por Thomas Kuhn que se refere ao período histórico em que uma dada comunidade científica compartilha o mesmo paradigma. A ciência normal tender a acabar em uma crise que é seguida da revolução imposta pelo advento de um novo paradigma}
+}
+% incomensurabilidade
+\newglossaryentry{incomensu-theory}
+{
+    name=\textbf{incomensurabilidade teórica},
+    description={Conceito articulado por Thomas Kuhn que se refere ao problema de comunicação intelectual entre teorias sob diferentes paradigmas. Dois paradigmas são fundamentalmente diferentes de maneira que é precária a comparação entre seus conceitos (mesmo que apresentem o mesmo nome e mesmo símbolo matemático)}
+}
+% realismo científico
+\newglossaryentry{realism-sci}
+{
+    name=\textbf{realismo científico},
+    description={Corrente da Filosofia da Ciência que defende a tese de que o propósito da Ciência é providenciar teorias que são descrições verdadeiras da realidade}
+}
+% realismo
+\newglossaryentry{realism}
+{
+    name=\textbf{realismo},
+    description={Concepção metafísica que admite a existência da realidade objetiva, ou seja, que a realidade não depende de ninguém para observá-la}
+}
+% idealismo
+\newglossaryentry{idealism}
+{
+    name=\textbf{idealismo},
+    description={Concepção metafísica que faz oposição ao realismo. Nessa perspectiva, que pode ter interpretações ontológicas ou epistemológicas, a realidade é entendida como um produto subjetivo da mente}
+}
+% instrumentalismo
+\newglossaryentry{instrument}
+{
+    name=\textbf{instrumentalismo},
+    description={Corrente da Filosofia da Ciência radicalmente empirista que faz oposição ao realismo científico. Essa corrente defende que o objetivo da Ciência é produzir teorias que sejam adequadas empiricamente e apenas isso. Seu argumento é que adequação empírica não implica uma descrição verdadeira da realidade}
+}
+% problema da subdeterminação
+\newglossaryentry{problem-subdet}
+{
+    name=\textbf{problema da subdeterminação},
+    description={Dificuldade de garantir que as evidências observadas determinem a verdade de uma teoria sem que existam outras teorias empiricamente equivalentes}
+}
+% inferência à melhor explicação
+\newglossaryentry{ibe}
+{
+    name=\textbf{inferência à melhor explicação},
+    description={[sinônimo de abdução] Raciocínio não-dedutivo que busca definir a hipótese que melhor explica as evidências empíricas}
+}
+% heurística
+\newglossaryentry{heuristic}
+{
+    name=\textbf{heurística},
+    description={Conjunto de técnicas de solução de problemas que não garantem uma solução ótima ou racional, mas são suficientes para atingir os propósitos práticos da tomada de decisão. O principal exemplo é a solução de problemas por tentativa e erro}
+}
+% problema da equifinalidade
+\newglossaryentry{problem-equifinal}
+{
+    name=\textbf{problema da equifinalidade},
+    description={Notação de Keith Beven para a versão branda do problema da subdeterminação no caso de modelos numéricos ambientais. A subdeterminação dos modelos ocorre porque as informações sobre os processos modelados são incompletas, fato que garante a existência de estruturas de modelos que são empiricamente equivalentes, ou equifinais}
+}
+% hipóteses auxiliares
+\newglossaryentry{aux-hyp}
+{
+    name=\textbf{hipóteses auxiliares},
+    description={Conjunto de hipóteses necessárias para além da hipótese principal de um modelo}
+}
+% equação do erro total
+\newglossaryentry{eq-total-error}
+{
+    name=\textbf{equação do erro total},
+    description={Equação que inclui todas as fontes de erros em um modelo, tanto estatísticas quanto epistêmicas}
+}
+% modelos empiricamente equivalentes
+\newglossaryentry{emp-eq-model}
+{
+    name=\textbf{modelos empiricamente equivalentes},
+    description={Modelos diferentes mas que apresentam resultados simulados que não apresentam desvios significativos diante do erro observacional total. Nesse caso, não existe razão empírica para favorecer um modelo de outro, pelo menos em relação à hipótese principal dos modelos}
+}
+% modelos empiricamente equivalentes
+\newglossaryentry{problem-overfitting}
+{
+    name=\textbf{problema de sobre-ajuste},
+    description={Problema que emerge na calibração de modelos, quando um modelo é excessivamente ajustado às informações empíricas disponíveis, resultando em um comportamento inferior quanto novas observações empíricas são avaliadas}
+}
+% modelo empiricamente aceitável
+\newglossaryentry{emp-acc-model}
+{
+    name=\textbf{modelo empiricamente aceitável},
+    description={Modelo que apresenta resultados simulados que satisfazem as observações empíricas com um nível de confiança pré-estabelecido}
+}
+% inequação de encapsulamento
+\newglossaryentry{eq-bracketing}
+{
+    name=\textbf{inequação de encapsulamento},
+    description={Inequação utilizada para se testar se um modelo é empiricamente aceitável. Os resultados simulados do modelos devem ser encapsulados pelas bandas de incerteza das observações (erro observacional total) com um nível de confiança pré-definido (critério de rejeição)}
+}
+% processo de calibração
+\newglossaryentry{proc-calib}
+{
+    name=\textbf{processo de calibração},
+    description={Procedimento de ajuste dos parâmetros de um modelo para se aumentar o seu grau de confirmação diante das evidências empíricas}
+}
+% incerteza empírica
+\newglossaryentry{uncert-empirical}
+{
+    name=\textbf{incerteza empírica},
+    description={Componente científico das incertezas no processo de tomada de decisão em políticas baseadas em evidências. Consiste no conjunto de incertezas epistêmicas e estatísticas sobre o estado do mundo. Outras componentes não-empíricas são: incerteza ética e incerteza política}
+}
+% EBP
+\newglossaryentry{ebp}
+{
+    name=\textbf{políticas baseadas em evidências},
+    description={Conceito de políticas públicas que buscam suporte total ou parcial em evidência objetivas para guiar a tomada de decisão e alocação de recursos}
+}
+\newglossaryentry{uncert-episteme}
+{
+    name=\textbf{incerteza epistêmica},
+    description={Conceito geral que se refere às diversas incertezas não-estatísticas existentes no processo de modelagem. Ao contrário da incerteza estatística, que se refere às informações disponíveis, a incerteza epistêmica está associada às informações indisponíveis}
+}
+\newglossaryentry{error-measure}
+{
+    name=\textbf{erro de medição},
+    description={Incerteza estatística decorrente da medição de evidências empíricas}
+}
+\newglossaryentry{error-commensu}
+{
+    name=\textbf{erro de comensurabilidade},
+    description={Incerteza epistêmica decorrente da diferença entre escalas no tempo e no espaço dos processos observados e os processos modelados}
+}
+\newglossaryentry{error-input}
+{
+    name=\textbf{erro dos dados de entrada},
+    description={Incerteza estatística e epistêmica associada aos dados utilizados para a configuração do modelo. Por exemplo: dados de chuva apresentam incerteza estatística da medição e a incerteza epistêmica da sua interpolação espacial}
+}
+\newglossaryentry{error-struct}
+{
+    name=\textbf{erro estrutural do modelo},
+    description={Incerteza epistêmica associada aos conceitos teóricos e aos procedimentos computacionais empregados em um dado modelo}
+}
+\newglossaryentry{error-obs}
+{
+    name=\textbf{erro observacional efetivo},
+    description={Superposição do erro de medição e o erro de comensurabilidade, representado a incerteza que o modelo deve ser submetido para se avaliar a sua adequação empírica}
+}
+\newglossaryentry{sys-target}
+{
+    name=\textbf{sistema-alvo},
+    description={Sistema real que um modelo supostamente busca representar, veiculando assim uma teoria ou hipótese sobre esse sistema}
+}
+\newglossaryentry{problem-repr}
+{
+    name=\textbf{problema de representação},
+    description={Dificuldade de construir um modelo que exerça a função semântica ou sintática de representar um sistema-alvo}
+}
+\newglossaryentry{idealization}
+{
+    name=\textbf{idealização},
+    description={Procedimento fundamental empregado para construir modelos, ou seja, construir as representações de forma que o modelo seja mais palpável e compreensível que o sistema alvo propriamente dito}
+}
+\newglossaryentry{idealiz-arist}
+{
+    name=\textbf{idealização Aristotélica},
+    description={(Ver abstração). Método de idealização que faz uso da abstração, um processo que busca remover os fatores e aspectos supostamente irrelevantes do sistema alvo, deixando apenas a sua essência}
+}
+\newglossaryentry{idealiz-galil}
+{
+    name=\textbf{idealização Galileana},
+    description={Método de idealização que aplica distorções controladas que poderiam ser incrementalmente removidas para se atingir assintoticamente o comportamento final do sistema alvo}
+}
+\newglossaryentry{abstraction}
+{
+    name=\textbf{abstração},
+    description={Processo de idealização que busca remover os fatores e aspectos supostamente irrelevantes do sistema alvo, deixando apenas a sua essência}
+}
+\newglossaryentry{neglig-premis}
+{
+    name=\textbf{premissas de negligência},
+    description={Conceito introduzido por Musgrave (1980), que consiste em ignorar fatores causais sabidamente importantes durante o processo de abstração, ou seja, quando a abstração termina apresentando um modelo com falsidades conhecidas}
+}
+\newglossaryentry{scale-models}
+{
+    name=\textbf{modelos de escala},
+    description={Representações que são literalmente cópias do sistema alvo em uma escala adequada para manipulações humanas, seja escala reduzida ou aumentada}
+}
+\newglossaryentry{scale-similarity}
+{
+    name=\textbf{similaridade entre escalas},
+    description={Capacidade de conversão entre as escala real de um sistema alvo e a escala de um modelo reduzido ou aumentado. A similaridade em geral não é completa, sendo válida apenas em determinados aspectos (ex: é similar geometricamente, mas não em termos de densidade ou resistência)}
+}
+\newglossaryentry{analog-models}
+{
+    name=\textbf{modelos analógicos},
+    description={Representações são baseadas em uma analogia com o sistema alvo, preferencialmente evolvendo sistemas com supostamente a mesma estrutura matemática (analogia formal)}
+}
+\newglossaryentry{analogy}
+{
+    name=\textbf{analogia},
+    description={Comparação entre dois ou mais objetos, enfatizando seus aspectos supostamente similares. Analogia é utilizada em modelagem para idealizar sistemas em termos de outros sistemas mais palpáveis que supostamente possuem a mesma estrutura matemática}
+}
+\newglossaryentry{infer-analog}
+{
+    name=\textbf{inferência analógica},
+    description={Raciocínio não-dedutivo e não-indutivo que conclui que um dado objeto $O_1$ possui a propriedade $P_1$ de um objeto $O_2$ em razão do compartilhamento de outras propriedades}
+}
+\newglossaryentry{explore-models}
+{
+    name=\textbf{modelos exploratórios},
+    description={Modelos utilizados na pesquisa científica como ferramentas para investigar e desenvolver novas hipóteses, especialmente úteis em áreas onde as teorias estabelecidas são insuficientes ou inexistentes, permitindo a exploração de possibilidades teóricas e potenciais explicações}
+}
+\newglossaryentry{mini-models}
+{
+    name=\textbf{modelos minimalistas},
+    description={Modelos simplificados ao extremo, usados para entender fenômenos complexos através da redução ao essencial, permitindo o foco em aspectos fundamentais sem a complicação de detalhes excessivos}
+}
+\newglossaryentry{system}
+{
+    name=\textbf{sistema},
+    description={Entidade ontológica emergente definida por um conjunto de partes fundamentais que apresentam relações entre si}
+}
+\newglossaryentry{hilomorphism}
+{
+    name=\textbf{hilomorfismo},
+    description={Teoria ontológica de cunho holístico professada por Aristóteles, que estabelece que todas as coisas são compostas tanto de matéria quanto de forma}
+}
+\newglossaryentry{feedback}
+{
+    name=\textbf{retroação},
+    description={Sinônimo de retroalimentação. Tradução de \textit{feedback}. Laço de informação que recursivo que atua sobre um sistema. Pode ser positivo, reforçando um dado processo, ou negativo, estabilizando um dado processo}
+}
+\newglossaryentry{struc-iso}
+{
+    name=\textbf{isomorfismo estrutural},
+    description={Conceito articulado por Ludwig von Bertalanffy para sustentar a Teoria Geral dos Sistemas, sendo analogia formal (homologia) observada em diferentes fenômenos}
+}
+\newglossaryentry{sys-open}
+{
+    name=\textbf{sistemas abertos},
+    description={Sistema que é capaz de processar um fluxo de entrada e saída de matéria, energia e informação, contrastando com os sistemas fechados descritos pela termodinâmica clássica}
+}
+\newglossaryentry{atractors}
+{
+    name=\textbf{atratores},
+    description={Conjunto de comportamentos finais, estáveis ou não, verificado na solução de um dado sistema de equações diferenciais, a depender do valor dos parâmetros e das condições iniciais}
+}
+\newglossaryentry{mental-models}
+{
+    name=\textbf{modelos mentais},
+    description={Denotação da dinâmica de sistemas para os modelos subjetivos e pessoais ainda em um estágio inicial do processo de modelagem}
+}
+\newglossaryentry{chaos}
+{
+    name=\textbf{caos determinístico},
+    description={Sensibilidade extrema produzida por não-linearidades em sistemas dinâmicos, geralmente associada às condições iniciais. Assim, o sistema caótico evolui de forma altamente instável, oscilando entre diversos estados finais. Erros de arredondamento podem amplificar esse efeito ainda mais, ainda que a origem do processo seja a própria formulação matemática}
+}
+\newglossaryentry{problem-irred}
+{
+    name=\textbf{princípio da irredutibilidade computacional},
+    description={O princípio da irredutibilidade computacional afirma que, para muitos sistemas complexos, não existe um atalho ou método simplificado que permita prever seu comportamento futuro mais rapidamente do que a própria execução passo a passo do sistema}
+}
+\newglossaryentry{round-error}
+{
+    name=\textbf{erro de arredondamento},
+    description={Diferença entre o valor numérico exato e o valor aproximado que resulta do arredondamento de um número, causado pelas limitações de precisão na representação dos números em sistemas computacionais}
+}
+\newglossaryentry{integration-error}
+{
+    name=\textbf{erro de truncamento},
+    description={Diferença entre o valor exato de uma função ou cálculo matemático analítico e sua aproximação resultante do método numérico empregado para calcular o valor em um ambiente computacional}
+}
+\newglossaryentry{strange-atrc}
+{
+    name=\textbf{atrator estranho},
+    description={Conjunto de estados em um sistema dinâmico que, apesar de caótico, possui uma estrutura geométrica definida e atrai as trajetórias do sistema, caracterizando um comportamento ordenado dentro do caos}
+}
+\newglossaryentry{abm-models}
+{
+    name=\textbf{modelos baseados em agentes},
+    description={Modelos baseados em agentes são sistemas de simulação computacional que utilizam entidades autônomas, com comportamentos e interações individuais, para estudar fenômenos complexos e emergentes em diversas áreas, como economia, biologia e sociologia}
+}
+\newglossaryentry{sys-dyn}
+{
+    name=\textbf{Dinâmica de Sistemas},
+    description={Dinâmica de Sistemas é uma abordagem de modelagem e análise que utiliza retroações, níveis, fluxos e atrasos para compreender o comportamento de sistemas complexos ao longo do tempo, ajudando a identificar e prever padrões de comportamento e suas causas subjacentes}
+}
+\newglossaryentry{compart-models}
+{
+    name=\textbf{modelo de compartimentos},
+    description={Modelo de compartimentos, na dinâmica de sistemas, é uma técnica de modelagem que divide um sistema em diferentes setores, onde cada compartimento representa uma quantidade (nível) acumulada de uma variável específica, e as taxas de fluxo entre esses compartimentos descrevem as mudanças ao longo do tempo}
+}
+\newglossaryentry{causal-struct}
+{
+    name=\textbf{estrutura causal},
+    description={Estrutura causal, na dinâmica de sistemas, refere-se ao conjunto de relações de causa e efeito que determinam o comportamento de um sistema ao longo do tempo, incluindo retroações e fluxos entre os compartimentos do sistema}
+}
+\newglossaryentry{causal-diag}
+{
+    name=\textbf{diagrama de laços causais},
+    description={Diagrama de laços causais, na dinâmica de sistemas, é uma ferramenta visual que representa as relações de causa e efeito entre as variáveis de um sistema, destacando como as mudanças em uma variável influenciam outras através de laços de reforço e laços de equilíbrio}
+}
+\newglossaryentry{bounds}
+{
+    name=\textbf{fronteira do sistema},
+    description={A fronteira do sistema, na dinâmica de sistemas, define os limites do que é incluído ou excluído em uma análise de sistema, especificando até quais compartimentos apresentam efeitos causais relevantes sobre o sistema, sem serem considerados fatores externos}
+}
+\newglossaryentry{eq-balance}
+{
+    name=\textbf{equação de balanço},
+    description={Equação diferencial que estabelece que a variação em um nível decorre do efeito líquido resultante das taxas de fluxo de entrada e de saída}
+}
+\newglossaryentry{princip-conserv}
+{
+    name=\textbf{princípio da conservação},
+    description={Princípio utilizado na dinâmica de sistemas para a aplicação de equações de balanço sobre compartimentos, que geralmente se refere a conservação de massa ou de energia (sistemas físicos)}
+}
+\newglossaryentry{exo-vars}
+{
+    name=\textbf{variáveis exógenas},
+    description={Variáveis exógenas, na dinâmica de sistemas, são fatores externos ao sistema modelado que influenciam seu comportamento, mas não são afetados pelas dinâmicas internas do próprio sistema. Elas são impostas de fora (forçantes externas) e permanecem constantes ou seguem um padrão predeterminado durante a simulação}
+}
+\newglossaryentry{parameters}
+{
+    name=\textbf{parâmetros},
+    description={Valores fixos de coeficientes que definem as características e comportamentos dos elementos e processos dentro de um modelo. Eles são usados para ajustar as relações e funções do sistema, determinando a resposta e a dinâmica do sistema sob diferentes condições}
+}
+\newglossaryentry{problem-numerics}
+{
+    name=\textbf{problema de integração numérica},
+    description={Dificuldade de se obter valores exatos na solução das equações de balanço na simulação de sistemas dinâmicos em computadores digitais. Ver erro de truncamento}
+}
+\newglossaryentry{method-euler}
+{
+    name=\textbf{método de Euler},
+    description={Técnica simples de integração numérica usada para resolver equações diferenciais ordinárias, onde se aproxima a solução ao avançar em pequenos passos, utilizando a derivada conhecida para estimar o valor da função no próximo ponto a partir do valor atual}
+}
+\newglossaryentry{princip-ins}
+{
+    name=\textbf{princípio da insensibilidade temporal},
+    description={Orientação de John Sterman, no âmbito da dinâmica de sistemas, de que os resultados de simulações de modelos não devem ser sensíveis ao passo de tempo empregado na integração numérica, independemente do método adotado}
+}
+\newglossaryentry{eq-aux}
+{
+    name=\textbf{equações auxiliares},
+    description={Equações empregadas na programação de sistemas dinâmicos (modelo procedural) com o objetivo de desagregar em etapas mais fáceis de serem compreendidas por seres humanos}
+}
+\newglossaryentry{eq-sup}
+{
+    name=\textbf{equações suplementares},
+    description={Equações empregadas na programação de sistemas dinâmicos (modelo procedural) com o objetivo de capturar informações importantes mas que não fazem parte do sistema modelado em si, como estatísticas de variáveis}
+}
+\newglossaryentry{percept-model}
+{
+    name=\textbf{modelo perceptual},
+    description={Também denominado modelo mental, consiste na representação subjetiva e altamente pessoal de um sujeito sobre o sistema-alvo (objeto)}
+}
+\newglossaryentry{concept-model}
+{
+    name=\textbf{modelo conceitual},
+    description={Representação formalizada e simplificada dos processos identificados no modelo perceptual. Este modelo envolve a criação de hipóteses e a adoção de suposições para abstrair os processos complexos da realidade de forma palpável e objetiva, frequentemente utilizando-se de formulações matemáticas}
+}
+\newglossaryentry{proced-model}
+{
+    name=\textbf{modelo procedural},
+    description={Representação prática de um modelo conceitual em um programa de computador, onde as equações e conceitos do modelo conceitual são traduzidos em código, permitindo simulações e previsões de fluxos e níveis baseadas em dados de entrada a partir da aplicação de tensões em circuitos eletrônicos}
+}
+\newglossaryentry{homology}
+{
+    name=\textbf{homologia},
+    description={Analogia formal realizada na modelagem, sendo uma equivalência entre as estruturas matemáticas entre o sistema-alvo e o modelo}
+}
+\newglossaryentry{leverage-pts}
+{
+    name=\textbf{pontos de alavancagem},
+    description={Pontos de alavancagem, na dinâmica de sistemas, são locais estratégicos dentro de um sistema complexo onde uma pequena mudança em um aspecto pode levar a mudanças significativas no comportamento do sistema, tornando-os cruciais para intervenções eficazes e mudanças sistêmicas}
+}
+\newglossaryentry{input-data}
+{
+    name=\textbf{dados de entrada},
+    description={Dados de entrada são informações ou valores fornecidos a um modelo para processamento ou análise, servindo como base para gerar resultados ou simular o comportamento do sistema sob estudo}
+}
+\newglossaryentry{problem-congest-outputs}
+{
+    name=\textbf{problema das saídas congestionadas},
+    description={Dificuldade de se aplicar equações de balanço com o método de Euler diante de fluxos de saída que alimentam outros compartimentos que podem eventualmente estar saturados. Uma solução consiste em computar tanto o fluxo máximo e potencial antes da definição do fluxo real}
+}
+\newglossaryentry{problem-simult-deplet}
+{
+    name=\textbf{problema da depleção simultânea},
+    description={Dificuldade de se aplicar equações de balanço com o método de Euler diante de múltiplos fluxos de saída que drenam o nível de um compartimento. Uma solução consiste em calcular um rateio proporcional entre os fluxos individuais se o fluxo total de saída for maior que o próprio nível no passo de tempo simulado}
+}
+\newglossaryentry{flux-actual}
+{
+    name=\textbf{fluxo real},
+    description={Fluxo que de fato influencia o nível de um compartimento na simulação de um sistema dinâmico}
+}
+\newglossaryentry{flux-pot}
+{
+    name=\textbf{fluxo potencial},
+    description={Fluxo calculado de saída ou de entrada que potencialmente altera o nível de um compartimento na simulação de um sistema dinâmico. O fluxo precisa ser confrontado diante das restrições físicas impostas (geralmente conservação e não-negatividade).}
+}
+\newglossaryentry{flux-max}
+{
+    name=\textbf{fluxo máximo},
+    description={Maior fluxo possível definido pela restrição física de um determinado compartimento}
+}
+\newglossaryentry{storage-deficit}
+{
+    name=\textbf{déficit de armazenamento},
+    description={Disponibilidade de armazenamento de um compartimento que possui uma capacidade máxima.}
+}
+\newglossaryentry{regular-effect}
+{
+    name=\textbf{efeito de regularização},
+    description={Estabilização do fluxo de água no tempo, minimizando variações extremas e garantindo a disponibilidade por mais tempo}
+}
+\newglossaryentry{curve-exp-grw}
+{
+    name=\textbf{curva de crescimento exponencial},
+    description={Gráfico que representa um aumento acelerado do nível de um compartimento ao longo do tempo, geralmente resultante da dominância de fluxos de entrada sobre os fluxos de saída associada à existência de laços de reforço (retroação positiva) sobre esses fluxos}
+}
+\newglossaryentry{curve-exp-dec}
+{
+    name=\textbf{curva de decaimento exponencial},
+    description={Gráfico que representa uma queda abrupta do nível de um compartimento ao longo do tempo, geralmente resultante da dominância de fluxos de saída sobre os fluxos de entrada associada à existência de laços de reforço (retroação positiva) sobre esses fluxos}
+}
+\newglossaryentry{loop-rei}
+{
+    name=\textbf{laço de reforço},
+    description={Retroação que age tanto sobre fluxos de entrada quanto de saída, aumentando o valor desse fluxo, o que pode resultar em comportamentos exponenciais (crescimento ou decaimento)}
+}
+\newglossaryentry{loop-bal}
+{
+    name=\textbf{laço de equilíbrio},
+    description={Retroação que age tanto sobre fluxos de entrada quanto de saída, reduzindo o valor desse fluxo à medida, levando a uma situação que tende a um estado de equilíbrio com ou sem oscilações}
+}
+\newglossaryentry{curve-log}
+{
+    name=\textbf{curva logística},
+    description={Gráfico que representa a alternância entre a dominância de laços de reforço e laços de equilíbrio, demonstrando um crescimento (ou decaimento) inicialmente rápido mas que depois acaba se estabilizando em um patamar em função de efeitos de equilíbrio}
+}
+\newglossaryentry{curve-oac}
+{
+    name=\textbf{curva de sobrecarga e colapso},
+    description={Gráfico típico de sistemas com dois compartimentos principais, onde um compartimento é drenado pelo outro, gerando um padrão de crescimento acelerado seguido por uma queda abrupta dos níveis quando os recursos acabam}
+}
+\newglossaryentry{problem-reprod}
+{
+    name=\textbf{problema da reprodutibilidade},
+    description={Problema típico de modelos de sistemas dinâmicos apontado por John Sterman, quando os modelos são dificilmente utilizáveis além de seus próprios desenvolvedores}
+}
+\newglossaryentry{sal}
+{
+    name=\textbf{análise de sensibilidade},
+    description={Técnica de diagnóstico de modelos que busca entender como o sistema modelado responde diante de mudanças nos seus elementos, tais como fluxos de entrada e valores de parâmetros}
+}
+\newglossaryentry{space-params}
+{
+    name=\textbf{espaço paramétrico},
+    description={Espaço paramétrico é o conjunto de todas as combinações possíveis dos parâmetros de um modelo ou sistema, utilizado para explorar e analisar como diferentes valores de parâmetros afetam o comportamento e os resultados do sistema. Em geral, o espaço paramétrico apresenta N-dimensões, em que N são o número de parâmetros}
+}
+\newglossaryentry{problem-dimens}
+{
+    name=\textbf{problema da dimensionalidade},
+    description={Dificuldade de se explorar espaços paramétricos com alta dimensão, demandando capacidades computacionais exorbitantes para se executar as simulações em um intervalo de tempo razoável}
+}
+\newglossaryentry{brute-force}
+{
+    name=\textbf{amostragem exaustiva},
+    description={Também denominado de força-bruta, consiste em uma estratégia de amostragem do espaço paramétrico a partir da enumeração de todas as possibilidades após uma discretização uniforme}
+}
+\newglossaryentry{lhs}
+{
+    name=\textbf{amostragem por Hipercubo Latino},
+    description={Estratégia de amostragem estatística utilizada para gerar conjuntos de pontos amostrais em um espaço de alta dimensão de maneira eficiente, garantindo que cada dimensão seja igualmente representada em todas as partes do seu intervalo, o que melhora a cobertura e a representatividade das amostras em relação aos métodos de amostragem aleatória simples}
+}
+% diagnóstico de modelos
+\newglossaryentry{model-diags}
+{
+    name=\textbf{diagnóstico de modelos},
+    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+}
+% função objetivo
+\newglossaryentry{obj-func}
+{
+    name=\textbf{função objetivo},
+    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+}
+%resposta hidrológica
+\newglossaryentry{hydro-response}
+{
+    name=\textbf{resposta hidrológica},
+    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+}
+% reservatório linear
+\newglossaryentry{linear-reserv}
+{
+    name=\textbf{reservatório linear},
+    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+}
+% hidrologia
+\newglossaryentry{hydrology}
+{
+    name=\textbf{Hidrologia},
+    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+}
+% viés de engenharia
+\newglossaryentry{bias-engineer}
+{
+    name=\textbf{viés de engenharia},
+    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+}
+% dualidade ciência-gestão
+\newglossaryentry{dual-sci-mgmt}
+{
+    name=\textbf{dualidade ciência-gestão},
+    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+}
+% viés fluvialista
+\newglossaryentry{bias-fluvial}
+{
+    name=\textbf{viés fluvialista},
+    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+}
+% bacia de ordem zero
+\newglossaryentry{zero-basin}
+{
+    name=\textbf{bacia de ordem zero},
+    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+}
+\newglossaryentry{ground-rain}
+{
+    name=\textbf{chuva efetiva},
+    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+}
+\newglossaryentry{interception}
+{
+    name=\textbf{interceptação},
+    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+}
+\newglossaryentry{unsat-zone}
+{
+    name=\textbf{zona vadosa},
+    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+}
+\newglossaryentry{fmc}
+{
+    name=\textbf{capacidade de campo},
+    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+}
+\newglossaryentry{fmd}
+{
+    name=\textbf{deficit de campo},
+    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+}
+\newglossaryentry{sat-zone}
+{
+    name=\textbf{zona saturada},
+    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+}
+\newglossaryentry{qv}
+{
+    name=\textbf{recarga},
+    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+}
+\newglossaryentry{infmax}
+{
+    name=\textbf{capacidade de infiltração},
+    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+}
+\newglossaryentry{ex-rain}
+{
+    name=\textbf{chuva excedente},
+    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+}
+\newglossaryentry{sfmax}
+{
+    name=\textbf{capacidade de detenção superficial},
+    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+}
+\newglossaryentry{sf-runoff}
+{
+    name=\textbf{escoamento superficial},
+    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+}
+\newglossaryentry{amc}
+{
+    name=\textbf{condições de umidade antecedentes},
+    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+}
+\newglossaryentry{deple-curve}
+{
+    name=\textbf{curva de recessão normal},
+    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+}
