@@ -196,11 +196,11 @@ pdfkeywords={keywords},
 \newcommand{\nameCode}{Algoritmo}
 
 % ---- local names -----
-\newcommand{\docTitle}{Considerações fundamentais sobre modelos hidrológicos e aplicações no planejamento da revitalização de bacias hidrográficas}
+\newcommand{\docTitle}{Uma síntese sobre modelos hidrológicos e suas aplicações no planejamento da revitalização de bacias hidrográficas}
 \newcommand{\chapEpis}{Teorias e evidências}
 \newcommand{\chapSys}{Sistemas e modelos}
 \newcommand{\chapHydro}{Processos hidrológicos}
-\newcommand{\chapEcon}{Capital natural}
+\newcommand{\chapEco}{Capital natural}
 
 % ------------ glossary setup ------------
 \input{glossary_pt}
@@ -294,31 +294,91 @@ pdfkeywords={keywords},
 \clearpage
 
 % ---------------- Symbols ---------------- 
-
+\small
 % ------  Epistemology Chapter
 \nomenclature[A]{\(S\)}{Enunciado}
 \nomenclature[A]{\(\Omega\)}{Espaço de possibilidades}
 \nomenclature[A]{\(H\)}{Hipótese}
 \nomenclature[A]{\(E\)}{Evidência}
 \nomenclature[A]{\(P\)}{Probabilidade}
+\nomenclature[A]{\(\mathcal{L}\)}{Verossimilhança informal}
 \nomenclature[A]{\(M\)}{Modelo}
 \nomenclature[A]{\(O\)}{Observação}
-\nomenclature[A]{\(\Theta\)}{Vetor de parâmetros}
 \nomenclature[A]{\(\Upsilon\)}{Vetor de dados de entrada}
+\nomenclature[A]{\(\Theta\)}{Vetor de parâmetros}
 \nomenclature[A]{\(\varepsilon\)}{Erro}
 \nomenclature[A]{\(\mu\)}{Média}
 \nomenclature[A]{\(\sigma^2\)}{Variância}
+\nomenclature[A]{\(\sigma\)}{Desvio padrão}
 \nomenclature[A]{\(s^2\)}{Variância amostral}
 \nomenclature[A]{\(n\)}{Tamanho amostral}
 
 % ------  Systems Chapter
 \nomenclature[B]{\(S\)}{Estado ou nível de um compartimento}
 \nomenclature[B]{\(\Delta t\)}{Passo de tempo}
+\nomenclature[B]{\(I\)}{Fluxo material de entrada em um compartimento}
+\nomenclature[B]{\(O\)}{Fluxo material de saída em um compartimento}
+\nomenclature[B]{\(\Upsilon\)}{Variáveis exógenas, dados de entrada}
+\nomenclature[B]{\(\Theta\)}{Conjunto de parâmetros}
+\nomenclature[B]{\(\Omega_{\Theta}\)}{Espaço paramétrico}
+\nomenclature[B]{\(Q\)}{Escoamento, vazão}
+\nomenclature[B]{\(R\)}{Escoamento superficial rápido}
+\nomenclature[B]{\(P\)}{Precipitação, chuva}
+\nomenclature[B]{\(E\)}{Evapotranspiração}
+\nomenclature[B]{\(k\)}{Tempo de residência médio}
+\nomenclature[B]{\(s_{a}\)}{Nível de ativação}
+\nomenclature[B]{\(s_{c}\)}{Nível de conectividade}
+\nomenclature[B]{\(s_{\text{max}}\)}{Capacidade de armazenamento}
+\nomenclature[B]{\(y_{M, i}\)}{Ponto (valor) simulado}
+\nomenclature[B]{\(y_{O, i}\)}{Ponto (valor) observado}
+\nomenclature[B]{\(y_{O, i}\)}{Ponto (valor) observado}
+\nomenclature[B]{\(\text{MAE}\)}{Média do erro absoluto}
+\nomenclature[B]{\(\text{RMSE}\)}{Raiz quadrada da média do erro ao quadrado}
+\nomenclature[B]{\(\text{R}^{2}\)}{Coeficiente de determinação}
+\nomenclature[B]{\(\text{KGE}\)}{Eficiência de Kling e Gupta}
+\nomenclature[B]{\(r\)}{Coeficiente de correlação}
+\nomenclature[B]{\(\mu_{M}\)}{Média dos pontos simulados}
+\nomenclature[B]{\(\mu_{O}\)}{Média dos pontos observados}
+\nomenclature[B]{\(\sigma_{M}\)}{Desvio padrão dos pontos simulados}
+\nomenclature[B]{\(\sigma_{O}\)}{Desvio padrão dos pontos observados}
+
 
 % ------  Hydrology Chapter
-\nomenclature[C]{\(Q\)}{Vazão}
+\nomenclature[C]{\(\textbf{C}\)}{Dossel da vegetação}
+\nomenclature[C]{\(\textbf{S}\)}{Superfície do solo}
+\nomenclature[C]{\(\textbf{O}\)}{Horizonte orgânico}
+\nomenclature[C]{\(\textbf{D}\)}{Déficit de campo}
+\nomenclature[C]{\(\textbf{V}\)}{Zona vadosa}
+\nomenclature[C]{\(P\)}{Precipitação, chuva}
+\nomenclature[C]{\(P_{\text{s}}\)}{Chuva efetiva}
+\nomenclature[C]{\(P_{\text{x}}\)}{Chuva excedente}
+\nomenclature[C]{\(I\)}{Infiltração}
+\nomenclature[C]{\(Q_{\text{si}}\)}{Enxurrada, escoamento superficial}
+\nomenclature[C]{\(Q_{\text{se}}\)}{Chuva direta, escoamento por excesso de saturação}
+\nomenclature[C]{\(Q_{\text{ss}}\)}{Exfiltração, escoamento subsuperficial}
+\nomenclature[C]{\(Q_{\text{o}}\)}{Percolação entre horizontes}
+\nomenclature[C]{\(Q_{\text{v}}\)}{Recarga}
+\nomenclature[C]{\(Q_{\text{g}}\)}{Escoamento de base}
+\nomenclature[C]{\(Q_{\text{gt}}\)}{Escoamento translacional}
+\nomenclature[C]{\(E_{\text{pot}}\)}{Evapotranspiração potencial}
+\nomenclature[C]{\(E_{\text{c}}\)}{Evaporação no dossel}
+\nomenclature[C]{\(E_{\text{s}}\)}{Evaporação na superfície}
+\nomenclature[C]{\(E_{\text{o}}\)}{Transpiração no horizonte orgânico}
+\nomenclature[C]{\(E_{\text{v}}\)}{Transpiração na zona vadosa}
+\nomenclature[C]{\(E_{\text{g}}\)}{Transpiração na zona freática}
+\nomenclature[C]{\(f\)}{Capacidade de infiltração}
+\nomenclature[C]{\(K\)}{Condutividade hidráulica}
+\nomenclature[C]{\(g\)}{Tempo de residência médio do aquífero}
+\nomenclature[C]{\(c_\text{max}\)}{Capacidade de interceptação}
+\nomenclature[C]{\(s_\text{max}\)}{Capacidade de detenção superficial}
+\nomenclature[C]{\(o_\text{max}\)}{Capacidade de campo do horizonte orgânico}
+\nomenclature[C]{\(v_\text{max}\)}{Capacidade de campo do horizonte mineral}
+\nomenclature[C]{\(k\)}{Tempo de detenção médio de reservatório linear}
+\nomenclature[C]{\(n\)}{Número efetivo de reservatórios lineares}
+\nomenclature[C]{\(\nu\)}{Volume do hidrograma}
 
 \printnomenclature
+\normalsize
 \clearpage
 
 % ---------------- Thesis Epigraph ---------------- 
@@ -341,6 +401,12 @@ pdfkeywords={keywords},
 
 \subfile{chap_hydrology_cover}
 \subfile{chap_hydrology}
+
+\subfile{chap_ecology_cover}
+\subfile{chap_ecology}
+
+% epílogo
+\subfile{chap_epilogue}
 
 % ---------------- line setup ----------------
 \nolinenumbers

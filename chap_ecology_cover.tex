@@ -1,0 +1,27 @@
+\documentclass[./main.tex]{subfiles}
+\graphicspath{{\subfix{./figs}}}
+
+% ------------ main document ------------
+\begin{document}
+\nolinenumbers
+
+% style setup
+\newpage
+\renewcommand{\headrulewidth}{0pt}
+\thispagestyle{fancy}
+%... then configure it
+\fancyhf{} % Clear all header and footer fields.
+\fancyfoot{} % clear all footer fields
+\fancyfoot[C]{\thepage}
+
+\par \hfill
+\vspace{40mm}
+\begin{adjustwidth}{45pt}{45pt}
+\begin{center}
+    \includegraphics[scale=0.7]{figs/fig_tucos.jpg}\\
+\end{center}
+\vspace{10mm}
+\noindent \textsf{Integer ullamcorper mauris augue, et tempor lorem elementum ornare. Suspendisse scelerisque efficitur massa, eu pharetra mauris molestie eu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus quis ligula nulla. Donec lobortis non lorem quis gravida.}
+\end{adjustwidth}
+\clearpage
+\end{document}
