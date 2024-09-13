@@ -212,6 +212,11 @@ pdfkeywords={keywords},
 \newacronym{scs}{\texttt{SCS}}{\textit{SoilConservation Service}}
 \newacronym{usda}{\texttt{USDA}}{\textit{United States Department of Agriculture}}
 \newacronym{cn}{\texttt{CN}}{\textit{Curve Number}}
+\newacronym{nbs}{\texttt{SBN}}{Soluções Baseadas na Natureza}
+\newacronym{atwi}{\texttt{TWI}}{Topographic Wetness Index}
+\newacronym{dem}{\texttt{MDE}}{Modelo Digital de Elevação}
+\newacronym{ahand}{\texttt{HAND}}{Height Above Nearest Drainage}
+
 
 % ------------ nomenclature setup ------------
 % This code creates the groups
@@ -347,27 +352,35 @@ pdfkeywords={keywords},
 \nomenclature[C]{\(\textbf{C}\)}{Dossel da vegetação}
 \nomenclature[C]{\(\textbf{S}\)}{Superfície do solo}
 \nomenclature[C]{\(\textbf{O}\)}{Horizonte orgânico}
-\nomenclature[C]{\(\textbf{D}\)}{Déficit de campo}
+\nomenclature[C]{\(\textbf{D}\)}{Déficit gravitacional}
+\nomenclature[C]{\(\textbf{D}_{\text{v}}\)}{Déficit capilar}
 \nomenclature[C]{\(\textbf{V}\)}{Zona vadosa}
+\nomenclature[C]{\(\text{V}_{\text{c}}\)}{Água capilar na zona vadosa}
+\nomenclature[C]{\(\text{V}_{\text{g}}\)}{Água gravitacional na zona vadosa}
+\nomenclature[C]{\(\textbf{G}\)}{Zona freática}
 \nomenclature[C]{\(P\)}{Precipitação, chuva}
 \nomenclature[C]{\(P_{\text{s}}\)}{Chuva efetiva}
 \nomenclature[C]{\(P_{\text{x}}\)}{Chuva excedente}
-\nomenclature[C]{\(I\)}{Infiltração}
-\nomenclature[C]{\(Q_{\text{si}}\)}{Enxurrada, escoamento superficial}
-\nomenclature[C]{\(Q_{\text{se}}\)}{Chuva direta, escoamento por excesso de saturação}
-\nomenclature[C]{\(Q_{\text{ss}}\)}{Exfiltração, escoamento subsuperficial}
-\nomenclature[C]{\(Q_{\text{o}}\)}{Percolação entre horizontes}
-\nomenclature[C]{\(Q_{\text{v}}\)}{Recarga}
+\nomenclature[C]{\(f\)}{Infiltração}
+\nomenclature[C]{\(Q\)}{Escoamento, fluxo, vazão}
+\nomenclature[C]{\(q_{\text{si}}\)}{Enxurrada, escoamento superficial}
+\nomenclature[C]{\(q_{\text{se}}\)}{Chuva direta, escoamento por excesso de saturação}
+\nomenclature[C]{\(q_{\text{ss}}\)}{Exfiltração, escoamento subsuperficial}
+\nomenclature[C]{\(q_{\text{o}}\)}{Percolação entre horizontes}
+\nomenclature[C]{\(q_{\text{v}}\)}{Recarga}
 \nomenclature[C]{\(Q_{\text{g}}\)}{Escoamento de base}
+\nomenclature[C]{\(Q_{\text{g},\text{max}}\)}{capacidade de produção do aquífero}
 \nomenclature[C]{\(Q_{\text{gt}}\)}{Escoamento translacional}
-\nomenclature[C]{\(E_{\text{pot}}\)}{Evapotranspiração potencial}
-\nomenclature[C]{\(E_{\text{c}}\)}{Evaporação no dossel}
-\nomenclature[C]{\(E_{\text{s}}\)}{Evaporação na superfície}
-\nomenclature[C]{\(E_{\text{o}}\)}{Transpiração no horizonte orgânico}
-\nomenclature[C]{\(E_{\text{v}}\)}{Transpiração na zona vadosa}
-\nomenclature[C]{\(E_{\text{g}}\)}{Transpiração na zona freática}
-\nomenclature[C]{\(f\)}{Capacidade de infiltração}
+\nomenclature[C]{\(e_{\text{pot}}\)}{Evapotranspiração potencial}
+\nomenclature[C]{\(e_{\text{c}}\)}{Evaporação no dossel}
+\nomenclature[C]{\(e_{\text{s}}\)}{Evaporação na superfície}
+\nomenclature[C]{\(e_{\text{o}}\)}{Transpiração no horizonte orgânico}
+\nomenclature[C]{\(e_{\text{v}}\)}{Transpiração na zona vadosa}
+\nomenclature[C]{\(e_{\text{g}}\)}{Transpiração na zona freática}
+\nomenclature[C]{\(f_{\text{max}}\)}{Capacidade de infiltração}
 \nomenclature[C]{\(K\)}{Condutividade hidráulica}
+\nomenclature[C]{\(\kappa\)}{Condutividade hidráulica lateral, transmissividade}
+\nomenclature[C]{\(\kappa_{\text{max}}\)}{Condutividade hidráulica lateral máxima}
 \nomenclature[C]{\(g\)}{Tempo de residência médio do aquífero}
 \nomenclature[C]{\(c_\text{max}\)}{Capacidade de interceptação}
 \nomenclature[C]{\(s_\text{max}\)}{Capacidade de detenção superficial}
@@ -376,6 +389,27 @@ pdfkeywords={keywords},
 \nomenclature[C]{\(k\)}{Tempo de detenção médio de reservatório linear}
 \nomenclature[C]{\(n\)}{Número efetivo de reservatórios lineares}
 \nomenclature[C]{\(\nu\)}{Volume do hidrograma}
+\nomenclature[C]{\(A\)}{Área da seção de tubulação (Lei de Darcy)}
+\nomenclature[C]{\(l\)}{Comprimento da tubulação (Lei de Darcy)}
+\nomenclature[C]{\(\Delta z\)}{Diferença de potencial hidrostático (Lei de Darcy)}
+\nomenclature[C]{\(\nabla \Phi\)}{Gradiente de potencial hidrostático (Lei de Darcy)}
+\nomenclature[C]{\(u\)}{Velocidade darciana (Lei de Darcy)}
+\nomenclature[C]{\(\lambda\)}{Índice topográfico de saturação}
+\nomenclature[C]{\(\text{T}\)}{TWI - Índice topográfico umidade}
+\nomenclature[C]{\(\alpha\)}{Área de drenagem por unidade de contorno}
+\nomenclature[C]{\(\beta\)}{Declividade do terreno}
+\nomenclature[C]{\(q_{\text{g}, i}\)}{Fluxo de base lateral por unidade de contorno}
+\nomenclature[C]{\(\omega\)}{Fator de escalonamento}
+\nomenclature[C]{\(m\)}{Uniformidade vertical do solo}
+\nomenclature[C]{\(\text{H}\)}{HAND - Altura Sobre a Drenagem Mais Próxima}
+\nomenclature[C]{\(H_{\alpha}\)}{Limiar de iniciação da drenagem}
+\nomenclature[C]{\(\text{T}_\text{max}\)}{Limiar superior de TWI}
+\nomenclature[C]{\(\text{H}_\text{max}\)}{Limiar superior de HAND}
+\nomenclature[C]{\(\text{HT}\)}{Índice TWI realçado pelo HAND}
+\nomenclature[C]{\(\tilde{\text{T}}\)}{TWI normalizado}
+\nomenclature[C]{\(\tilde{\text{H}}\)}{HAND normalizado}
+\nomenclature[C]{\(H_w\)}{Fator de dominância de HAND}
+
 
 \printnomenclature
 \normalsize
