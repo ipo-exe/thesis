@@ -1,0 +1,25 @@
+\documentclass[./main.tex]{subfiles}
+\graphicspath{{\subfix{./figs}}}
+
+% ------------ main document ------------
+\begin{document}
+\doublespacing % espaçamento entre linhas
+
+
+% estilo de configuração
+\newpage
+\renewcommand{\headrulewidth}{0pt}
+\thispagestyle{fancy}
+\fancyhf{} % Limpa todos os campos de cabeçalho e rodapé.
+\fancyfoot{} % limpa todos os campos de rodapé
+\fancyfoot[C]{\thepage}
+
+\begin{adjustwidth}{280pt}{0pt}
+	\singlespacing
+        \vspace*{100mm} % espaço para a dedicatória
+	\fontfamily{phv}\selectfont Para as amizades\\
+\end{adjustwidth}
+
+\clearpage
+
+\end{document}

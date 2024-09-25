@@ -1,0 +1,28 @@
+\documentclass[./main.tex]{subfiles}
+\graphicspath{{\subfix{./figs}}}
+
+% ------------ main document ------------
+\begin{document}
+\nolinenumbers
+
+% style setup
+\newpage
+\renewcommand{\headrulewidth}{0pt}
+\thispagestyle{fancy}
+%... then configure it
+\fancyhf{} % Clear all header and footer fields.
+\fancyfoot{} % clear all footer fields
+\fancyfoot[C]{\thepage}
+
+\par \hfill
+\vspace{40mm}
+\begin{adjustwidth}{45pt}{45pt}
+\begin{center}
+    \includegraphics[scale=1]{figs/fig_chair.jpg}\\
+\end{center}
+\vspace{10mm}
+\noindent \textsf{The whole is not merely the sum of its parts. If it were, chairs could not exist. Similarly, people could not exist. The \textbf{form} unifies in \textbf{dynamic systems} the parts that, when isolated, bear no resemblance to the whole.}
+
+\end{adjustwidth}
+\clearpage
+\end{document}

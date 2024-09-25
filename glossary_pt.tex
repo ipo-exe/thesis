@@ -28,25 +28,25 @@
 \newglossaryentry{teoria}
 {
     name=teoria,
-    description={Na epistemologia, consiste em um enunciado universal (ou sistema de enunciados) que estabelece definitivamente a verdade de um fenômeno}
+    description={Enunciado universal (ou sistema de enunciados) que estabelece definitivamente a verdade de um fenômeno}
 }
 % hipotese
 \newglossaryentry{hipotese}
 {
     name=hipótese,
-    description={Enunciado universal em estágio probatório para ser alçado ao \textit{status} de teoria a partir da sua confirmação}
+    description={Enunciado universal em estágio probatório para ser alçado ao \textit{status} de teoria a partir da sua confirmação ou corroboração}
 }
 % inferencia dedutiva
 \newglossaryentry{infer-dedu}
 {
     name=inferência dedutiva,
-    description={Operação da Lógica que estabelece a verdade de um dado enunciado a partir de premissas antecedentes. A verdade do enunciado consequente só é garantida desde que suas premissas antecedentes sejam também verdadeiras}
+    description={Raciocínio lógico que estabelece a verdade de um dado enunciado a partir de premissas antecedentes. A verdade do enunciado consequente só é garantida desde que suas premissas antecedentes sejam também verdadeiras}
 }
 % inferencia indutiva
 \newglossaryentry{infer-indu}
 {
     name=inferência indutiva,
-    description={Raciocínio baseado em uma generalização ou extrapolação que estabelece um enunciado universal a partir de enunciados singulares. A verdade do enunciado universal não é garantida, mas apresenta graus de probabilidade}
+    description={Raciocínio empírico baseado em uma generalização ou extrapolação que estabelece um enunciado universal a partir de observações enunciados singulares. A verdade do enunciado universal não é garantida, mas apresenta graus de probabilidade}
 }
 % infinite regress
 \newglossaryentry{problem-regress}
@@ -625,7 +625,7 @@
 \newglossaryentry{flux-pot}
 {
     name=fluxo potencial,
-    description={Fluxo calculado de saída ou de entrada que potencialmente altera o nível de um compartimento na simulação de um sistema dinâmico. O fluxo precisa ser confrontado diante das restrições físicas impostas (geralmente conservação e não-negatividade).}
+    description={Fluxo calculado de saída ou de entrada que potencialmente altera o nível de um compartimento na simulação de um sistema dinâmico. O fluxo precisa ser confrontado diante das restrições físicas impostas (geralmente conservação e não-negatividade)}
 }
 \newglossaryentry{flux-max}
 {
@@ -635,7 +635,7 @@
 \newglossaryentry{storage-deficit}
 {
     name=déficit de armazenamento,
-    description={Disponibilidade de armazenamento de um compartimento que possui uma capacidade máxima.}
+    description={Disponibilidade de armazenamento de um compartimento que possui uma capacidade máxima}
 }
 \newglossaryentry{regular-effect}
 {
@@ -706,524 +706,576 @@
 \newglossaryentry{model-diags}
 {
     name=diagnóstico de modelos,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Conjunto amplo de técnicas aplicadas para se avaliar a adequação de um modelo diante de diveros aspectos. Na Dinâmica de Sistemas, John Sterman lista os seguintes diagnósticos: adequação da fronteira; adequação da estrutura; consistência dimensional; distribuição dos parâmetros; estudos comparativos; erro de integração; condições extremas; análise de sensibilidade; comportamentos anômalos; adequação empírica; surpresas, e; impactos positivos}
 }
 % função objetivo
 \newglossaryentry{obj-func}
 {
     name=função objetivo,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Expressão matemática que define a variável (ou conjunto de variáveis) a ser maximizado ou minimizado em um problema de otimização}
 }
 %resposta hidrológica
 \newglossaryentry{hydro-response}
 {
     name=resposta hidrológica,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Forma como os fluxos de saída de uma bacia hidrográfica (escoamento) se manifestam diante dos fluxos de entrada (chuva). Em geral, a separação entre respostas rápidas (enchentes) e respostas lentas (estiagens) é nítida}
 }
 % reservatório linear
 \newglossaryentry{linear-reserv}
 {
     name=reservatório linear,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Compartimento que exibe um fluxo de saída diretamente proporcional ao seu nível: $Q_t = S_t/k$, em que $Q$ é o fluxo de saída do reservatório no tempo $t$; $S$ é o nível do reservatório no tempo $t$, e; $k$ é o tempo de residência médio do reservatório}
 }
 % hidrologia
 \newglossaryentry{hydrology}
 {
     name=Hidrologia,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Ciência natural que estuda o ciclo hidrológico em sua fase terrestre nos continentes}
 }
 % viés de engenharia
 \newglossaryentry{bias-engineer}
 {
     name=viés de engenharia,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Tendência formadora da Hidrologia, que busca conhecimentos voltados para a solução de problemas práticos da sociedade}
 }
 % dualidade ciência-gestão
 \newglossaryentry{dual-sci-mgmt}
 {
     name=dualidade ciência-gestão,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Característica da Hidrologia de existir em uma interface entre investigação teórica sobre a natureza e a solução prática de impasses sociais, ambientais e econômicos}
 }
 % viés fluvialista
 \newglossaryentry{bias-fluvial}
 {
     name=viés fluvialista,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Tendência hegemônica na Hidrologia de se estudar problemas essencialmente hidráulicos na escala das bacias hidrográficas, tais como a propagação de vazão nos canais de rios e a inundação das planícies adjacentes}
 }
 % bacia de ordem zero
 \newglossaryentry{zero-basin}
 {
     name=bacia de ordem zero,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Região de encostas e terrenos mais altos da paisagem onde ocorre a interação da precipitação com a vegetação, solos e rochas, produzindo as respostas hidrológicas observadas a jusante, nos rios. Também denominada de \textbf{bacia de vertente}}
 }
 \newglossaryentry{infiltration}
 {
     name=infiltração $f$,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Fluxo da água superficial para o interior da matriz do solo}
 }
 \newglossaryentry{ground-rain}
 {
     name=chuva efetiva $p_{\text{s}}$,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Fluxo de chuva que atinge a superfície do solo após a saturação do dossel da vegetação}
 }
 \newglossaryentry{intercep-capacity}
 {
     name=capacidade de interceptação $c_{\text{max}}$,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Nível máximo de armazenamento de água no dossel da vegetação antes da produção de chuva efetiva}
 }
 \newglossaryentry{canopy}
 {
     name=dossel da vegetação $\textbf{C}$,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Folhas e ramos das plantas que atuam como um compartimento ou reservatório que armazena água pela tensão superficial antes da chuva atigir a superfície do solo}
 }
 \newglossaryentry{interception}
 {
     name=interceptação,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Fluxo inicial de enchimento do dossel da vegetação com água da chuva}
 }
 \newglossaryentry{unsat-zone}
 {
     name=zona vadosa $\textbf{V}$,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Matriz porosa de minerais sólidos do solo que armazena água em filmes mantidos pela tensão superficial de suas partículas. Também denominada de zona insaturada}
 }
 \newglossaryentry{fmc}
 {
     name=capacidade de campo $v_{\text{max}}$,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Nível máximo de armazenamento de água capilar na zona vadosa}
 }
 \newglossaryentry{fmd}
 {
     name=déficit capilar $\textbf{D}_\text{v}$,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Capacidade de armazenamento potencial de água capilar na zona vadosa}
 }
 \newglossaryentry{sat-zone}
 {
     name=zona freática $\textbf{G}$,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Matriz porosa de solo e rocha que armazena água em um aquífero livre sob pressão atmosférica. Também denominada de zona saturada}
 }
 \newglossaryentry{dgrav}
 {
     name=déficit gravitacional $\textbf{D}$,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Capacidade de armazenamento potencial de água gravitacional na zona vadosa ou profundidade efetiva do lençol freático}
 }
 \newglossaryentry{qv}
 {
     name=recarga $q_{\text{v}}$,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Fluxo vertical (percolação) de água que transfere água da zona vadosa para a zona freática. Também denominada de percolação última}
 }
 \newglossaryentry{infmax}
 {
     name=capacidade de infiltração $f_{\text{max}}$,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Fluxo máximo potencial de infiltração decorrente das características da superfície do solo}
 }
 \newglossaryentry{cond-hyd}
 {
     name=condutividade hidráulica $K$,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Fluxo máximo potencial da percolação da água na zona freática de um aquífero}
 }
 \newglossaryentry{ex-rain}
 {
     name=chuva excedente $p_{x}$,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Fluxo de chuva em excesso que superou a capacidade de infiltração do solo}
 }
 \newglossaryentry{sfmax}
 {
     name=capacidade de detenção superficial $s_{\text{max}}$,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Nível máximo de armazenamento nas depressões superficiais}
 }
 \newglossaryentry{sf-runoff}
 {
     name=enxurrada $q_{si}$,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Fluxo superficial e generalizado que é produzido em razão da capacidade de infiltração do solo relativamente inferior ao fluxo de chuva efetiva}
 }
 \newglossaryentry{amc}
 {
     name=condições de umidade antecedentes,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={conjunto de condições iniciais do sistema na véspera de um evento de chuva}
 }
 \newglossaryentry{deple-curve}
 {
     name=curva de recessão,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Curva de esvaziamento da zona freática exibida pelo hidrograma de um rio ao longo de uma estiagem (escoamento de base)}
 }
 \newglossaryentry{ground-flow}
 {
     name=escoamento de base $Q_{\text{g}}$,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Fluxo de saída ou esvaziamento da zona freática, geralmente tido como uma resposta lenta da bacia hidrográfica}
 }
 \newglossaryentry{g-coef}
 {
     name=tempo de detenção do aquífero $g$,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Parâmetro característico do aquífero no caso de se assumir que a zona freática se comporta como um reservatório linear}
 }
 % new entries
 \newglossaryentry{hydro_cicle}
 {
     name=ciclo hidrológico,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Fluxo circular da água no Planeta Terra, energizado pela radiação solar. A evaporação transfere a água superficial para a atmosfera. Essa água retorna para a superfície na forma de precipitação de chuva, orvalho e neve}
 }
 \newglossaryentry{age_inf}
 {
     name=Idade da Infiltração,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Período entre 1930 e 1970 em que a comunidade científica na Hidrologia operou sob a normalidade do paradigma Hortoniano, que estabelecia a infiltração como o processo chave para explicar a alternância entre enchentes e estiagens dos rios}
 }
 \newglossaryentry{rie}
 {
     name=escoamento superficial por excesso de infiltração,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Fluxo superficial e generalizado que é produzido em razão da capacidade de infiltração do solo relativamente inferior ao fluxo de chuva efetiva. Sinônimo de \textbf{exurrada}}
 }
 \newglossaryentry{cn_method}
 {
     name=Método \acrfull{cn},
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Método empírico para se estimar o balanço hídrico em bacias hidrográficas desenvolvido pelo Soil Conservation Service durante os anos 1950}
 }
 
 \newglossaryentry{subsur_flow}
 {
     name=exfiltração $q_{\text{ss}}$,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Fluxo de nascentes efêmeras localizadas na base de encostas, decorrentes da rápida passagem da água por horizontes orgânicos com grande quantidade de macroporos. Comum em florestas. Tido como uma resposta rápida}
 }
 
 \newglossaryentry{rse}
 {
     name=chuva direta $q_{\text{se}}$,
-    description={escoamento superficial por excesso de saturação. \textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Fluxo superficial que é produzido em razão da incidência de chuva sobre solo saturado. Pode ser generalizado, mas ocorre com mais frequência em áreas úmidas ripárias. Comum em encostas convergentes, que forçam o afloramento do lençol freático. Tido como uma resposta rápida}
 }
 
 \newglossaryentry{trans_flow}
 {
     name=escoamento translacional $Q_{\text{gt}}$,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Fluxo de água da zona freática produzido pela pressurização súbita das franjas capilares nas zonas ripárias, onde o lençol freático está próximo da superfície. Tido como uma resposta rápida}
 }
 
 \newglossaryentry{macropor}
 {
     name=macroporosidade,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Rede de poros que armazenam e conduzem água em proporção muito superior do que se considerada a porosidade aparente da matriz do solo. Maior em solos orgânicos estruturados, com presença de fauna e flora (bioturbação). Comum em rochas alteradas, com a presença de fraturas e demais estruturas geológicas}
 }
 
 \newglossaryentry{age_diff}
 {
     name=Idade da Diferenciação,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Período entre 1970 até o presente em que a comunidade científica na Hidrologia busca estabelecer como diferentes ambientes apresentam mecanismos de resposta distintos, a depender das condições climáticas, topográficas e de uso do solo}
 }
 
 \newglossaryentry{nasc_perenes}
 {
     name=nascentes perenes,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Pontos e manchas na paisagem onde ocorre o afloramento do aquífero livre principal de uma bacia, ocorrendo a contribuição do escoamento de base na resposta lenta do rios (estiagem)}
 }
 
 \newglossaryentry{nasc_efemeras}
 {
     name=nascentes efêmeras,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Pontos e manchas na paisagem onde ocorre o afloramento de pequenos aquíferos suspensos, formados em horizontes orgânicos mais superficiais de solo, ocorrendo a contribuição da exfiltração na resposta rápida dos rios (enchente)}
 }
 
 \newglossaryentry{water_gravit}
 {
     name=água gravitacional $\textbf{V}_{\text{g}}$,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Água armazenada na zona vadosa que é livre para percolar verticalmente para a zona freática pela ação da gravidade (recarga)}
 }
 
 \newglossaryentry{water_capilar}
 {
     name=água capilar $\textbf{V}_{\text{c}}$,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Água armazenada na zona vadosa que está presa pelas forças coesivas (tensão superficial) das partículas do solo. Essa água está mais acessível para a transpiração das plantas do que para a recarga da zona freática}
 }
 
 \newglossaryentry{perm_trans}
 {
     name=transições de permeabilidade,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Mudanças na condutividade hidráulica efetiva observada entre diferentes horizontes de solo. Geralmente a condutividade hidráulica aumenta em horizontes mais superficiais em razão da macroporosidade}
 }
 \newglossaryentry{o-horizon}
 {
     name=horizonte orgânico $\textbf{O}$,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Denominação genérica para a camada superior do solo com maior macroporosidade em função da ação da fauna flora do solo}
 }
 
 \newglossaryentry{sat_areas}
 {
     name=áreas úmidas ripárias,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Zonas em fundos de vale, próximos aos cursos d'água, onde ocorre frequentemente o afloramento do lençol freático}
 }
 
 \newglossaryentry{vsa}
 {
     name=área de contribuição variável,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Fenômeno de expansão e retração das áreas úmidas ripárias que produz uma contribuição variável de escoamento por chuva direta. A variação da área de contribuição pode ser tanto durante um evento de chuva quanto ao longo das estações do ano}
 }
 
 \newglossaryentry{fringe}
 {
     name=franja capilar,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Região na zona vadosa que exibe déficit capilar nulo em razão da proximidade com a zona freática, de onde ocorre a sucção da água livre}
 }
 
 \newglossaryentry{hollows}
 {
     name=encostas convergentes,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Encostas em que a drenagem superficial e subterrânea direcionam-se para uma única região, geralmente produzindo áreas úmidas ripárias}
 }
 
 \newglossaryentry{spurs}
 {
     name=encostas divergentes,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Encostas em que a drenagem superficial e subterrânea espalham-se para direções diferentes, evitando a formação de áreas úmidas ripárias}
 }
 
 \newglossaryentry{iso_sign}
 {
     name=assinatura isotópica,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Concentração de isótopos que permite identificar ou rotular a origem da água desde o seu processo de fracionamento térmico na atmosfera}
 }
 \newglossaryentry{geo-sign}
 {
     name=assinatura geoquímica,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Concentração solutos que permite identificar ou rotular a origem da água desde o seu processo de difusão do solo e nas rochas}
 }
 \newglossaryentry{term_frac}
 {
     name=fracionamento térmico,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Mudança da concentração de isótopos causada pelas trocas de fase da água (evaporação e condensação). A água de uma chuva qualquer apresenta uma assinatura isotópica diferente da água do oceano (e outras chuvas) em razão da sua trajetória de fracionamento térmico}
 }
 
 \newglossaryentry{bedrock_topo}
 {
     name=topografia da soleira,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Irregularidades no embasamento de rocha que estabelece o fundo relativamente impermeável do aquífero livre da zona freática. Essas irregularidades podem criar bolsões ou zonas estagnadas no aquífero}
 }
 
 \newglossaryentry{old_water_paradox}
 {
     name=paradoxo da água velha,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Dificuldade de se explicar a rápida mobilização e a alta prevalência de água velha nos rios diante da precipitação de água nova, assim como a diversidade de assinaturas geoquímicas da água velha}
 }
 
 \newglossaryentry{geo_hydro_sep}
 {
     name=compartimentalização hidro-geoquímica,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Conceito da separação em múltiplas escalas dos tempos de residência da água nos poros da zona freática, criando uma diversidade de assinaturas geoquímicas da água}
 }
 
 \newglossaryentry{eco_hydro_sep}
 {
     name=compartimentalização hidro-ecológica,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Conceito da separação da água na zona vadosa entre aquela amplamente absorvida pelas radicelas das plantas, ocupando os microporos do solo, e aquela que é rapidamente drenada (exfiltração e recarga), nos macroporos do solo}
 }
 
 \newglossaryentry{two_world}
 {
     name=hipótese de dois mundos,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Hipótese testável sobre a compartimentalização hidro-ecológica proposta por Jeffrey McDonnell. Um mundo da água seria a água das plantas (água verde) e o outro mundo seria a água dos rios (água azul)}
 }
 
 \newglossaryentry{unit_hydro}
 {
     name=Hidrograma Unitário,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Resposta linear mínima de uma bacia hidrográfica. Respostas complexas podem ser construídas a partir do hidrograma unitário a partir da convolução}
 }
 
 \newglossaryentry{time_conc}
 {
     name=tempo de concentração,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Parâmetro efetivo do tempo médio de resposta utilizado para se determinar o hidrograma unitário}
 }
 
 \newglossaryentry{models_data}
 {
     name=modelos baseados em dados,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Modelos hidrológicos que se concentram na análise e previsão de dados observacionais, utilizando técnicas como redes neurais artificiais. Buscam maximizar a capacidade preditiva (\gls{pred_cap}), mas podem comprometer a capacidade explicativa (\gls{explan_cap}) dos processos hidrológicos, muitas vezes tratando a bacia hidrográfica como uma caixa-preta}
 }
 
 \newglossaryentry{models_process}
 {
     name=modelos baseados em processos,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Modelos hidrológicos que representam os processos físicos que ocorrem em uma bacia hidrográfica. Permitem a simulação do comportamento da bacia mesmo sem observações empíricas, oferecendo uma base teórica para a geração de escoamento e possibilitando a \gls{infer-dedu} dos processos hidrológicos}
 }
 
 \newglossaryentry{pred_cap}
 {
     name=capacidade preditiva,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Habilidade dos modelos hidrológicos de prever o comportamento do escoamento com base em dados de entrada, como precipitação. Refere-se à precisão e confiabilidade das previsões fornecidas pelo modelo}
 }
 
 \newglossaryentry{explan_cap}
 {
     name=capacidade explicativa,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Habilidade dos modelos hidrológicos de fornecer uma compreensão dos processos físicos que geram o escoamento. Inclui a capacidade de descrever como e por que ocorrem os fenômenos hidrológicos observados, além de apenas prever resultados}
 }
 
 \newglossaryentry{scale_problem}
 {
     name=problema da escala,
-    description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    description={Refere-se às dificuldades surgidas quando a escala representada pelo modelo hidrológico difere da escala das observações empíricas. Essa discrepância pode levar à introdução de erros nos resultados do modelo, tornando-os incomensuráveis ou incompatíveis com as evidências observadas}
 }
 
 \newglossaryentry{comp-eff}
 {
-	name=efeitos de compensação,
-	description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    name=efeitos de compensação,
+    description={Discrepâncias internas nos modelos hidrológicos causadas por balanços de massa impostos nos compartimentos do modelo. Esses efeitos podem levar a resultados irreais, pois os balanços de massa podem mascarar processos físicos subjacentes, comprometendo a precisão das simulações}
 }
 
 \newglossaryentry{models-phys}
 {
-	name=modelos fisicamente embasados,
-	description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    name=modelos fisicamente embasados,
+    description={Modelos hidrológicos baseados em leis físicas fundamentais, como a conservação de massa, momento e energia. Diferem dos modelos sistêmicos ao utilizar representações contínuas de campos vetoriais para simular os processos hidrológicos, permitindo uma descrição mais detalhada e teoricamente consistente do comportamento da bacia hidrográfica}
 }
 
 \newglossaryentry{darcy-law}
 {
-	name=Lei de Darcy,
-	description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    name=Lei de Darcy,
+    description={Princípio que descreve a vazão de água em meio poroso. Estabelece que a vazão é diretamente proporcional à área da seção transversal da tubulação e à diferença de potencial hidrostático, e inversamente proporcional ao comprimento da tubulação. Matematicamente, é expressa como $\textbf{u} = -K \nabla \Phi$, onde $\textbf{u}$ é a velocidade darciana, $K$ é a condutividade hidráulica, e $\nabla \Phi$ é o gradiente de potencial hidrostático}
 }
 
 \newglossaryentry{glob-scale}
 {
-	name=escala global,
-	description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    name=escala global,
+    description={Nível de análise que avalia o comportamento agregado e integrado do sistema hidrológico como um todo, considerando todas as suas partes e interações em uma perspectiva macroscópica}
 }
 
 \newglossaryentry{loc-scale}
 {
-	name=escala local,
-	description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    name=escala local,
+    description={Nível de análise que foca em elementos infinitesimais do solo, permitindo uma representação detalhada e precisa dos processos hidrológicos em pequenas áreas ou unidades, facilitando a descrição dos fenômenos hidrológicos em uma perspectiva microscópica}
 }
 
 \newglossaryentry{nash-model}
 {
-	name=modelo de Kalinin-Miyukov-Nash,
-	description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    name=modelo de Kalinin-Miyukov-Nash,
+    description={Modelo hidrológico que representa a resposta de uma bacia hidrográfica como uma rede de reservatórios organizados em série, conhecida como cascata. Utiliza uma distribuição Gama para parametrizar o hidrograma, incorporando parâmetros como o volume do hidrograma ($\nu$), o número efetivo de reservatórios ($n$) e o tempo de residência médio dos reservatórios ($k$). Desenvolvido independentemente por Kalinin \& Miyukov (1957) e Nash (1958)}
 }
 
 \newglossaryentry{finite-diff-method}
 {
-	name=método de diferenças finitas,
-	description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    name=método de diferenças finitas,
+    description={Técnica numérica utilizada para resolver equações diferenciais parciais, empregada na simulação de escoamentos transientes em meios porosos. Este método discretiza o domínio espacial em uma malha regular, permitindo a aproximação das derivadas envolvidas nas equações físicas}
 }
 
 \newglossaryentry{comp-grid}
 {
-	name=malha computacional,
-	description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    name=malha computacional,
+    description={Estrutura de discretização espacial utilizada em métodos numéricos para simular processos hidrológicos. Consiste em uma divisão do domínio espacial em elementos ou células, que podem ser regulares ou irregulares, facilitando a aplicação de técnicas como o método de diferenças finitas ou elementos finitos para resolver as equações que descrevem os processos físicos}
 }
 
 \newglossaryentry{finite-elem-method}
 {
-	name=método de elementos finitos,
-	description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    name=método de elementos finitos,
+    description={Técnica numérica utilizada para resolver equações diferenciais parciais em domínios complexos, empregando uma malha computacional irregular. Permite uma representação mais flexível da geometria do domínio e é particularmente útil na simulação de escoamentos transientes em meios porosos com geometrias variadas}
 }
 
 \newglossaryentry{scale-prem}
 {
-	name=premissa de escalabilidade,
-	description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    name=premissa de escalabilidade,
+    description={Suposição inerente aos modelos hidrológicos de que os processos físicos representados podem ser aplicados de maneira consistente em diferentes escalas espaciais. Essa premissa idealiza que os mesmos princípios e relações físicas se mantêm independentemente da escala, o que frequentemente não corresponde à realidade devido a variações e complexidades nos processos hidrológicos em diferentes escalas}
 }
 
 \newglossaryentry{pred-models}
 {
-	name=modelos preditivos,
-	description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    name=modelos preditivos,
+    description={Modelos hidrológicos utilizados para resolver questões práticas específicas, focados na previsão de eventos hidrológicos sob condições determinadas. Esses modelos aplicam parâmetros condicionados por observações empíricas em contextos específicos de tempo e espaço para gerar previsões em situações distintas}
 }
 
 \newglossaryentry{scalab}
 {
-	name=escalonamento,
-	description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    name=escalonamento,
+    description={Processo de transferir informações entre diferentes escalas espaciais e temporais na modelagem hidrológica, envolvendo a adaptação de dados e parâmetros de uma escala para outra para garantir a consistência e precisão dos modelos}
 }
 
 \newglossaryentry{nat-scale}
 {
-	name=escala natural,
-	description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    name=escala natural,
+    description={Nível de análise que refere-se às velocidades características reais exibidas pelos processos hidrológicos na natureza, incluindo o tempo de vida de eventos intermitentes, períodos de eventos anuais e tendências em processos estocásticos de longa duração}
 }
 
 \newglossaryentry{obs-scale}
 {
-	name=escala observacional,
-	description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    name=escala observacional,
+    description={Nível de análise relacionado à escala das observações empíricas na modelagem hidrológica, incluindo aspectos como extensão dos dados, resolução entre amostras e intervalo de integração das amostras}
 }
 
 \newglossaryentry{model-scale}
 {
-	name=escala conceitual,
-	description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    name=escala conceitual,
+    description={Nível de análise que serve como ponte entre a escala natural dos processos hidrológicos e a escala observacional das evidências empíricas, representando os processos e interações hidrológicas de maneira estruturada no modelo}
 }
+
 \newglossaryentry{upscaling}
 {
-	name=escalonamento ascendente,
-	description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    name=escalonamento ascendente,
+    description={Processo de transferência de informações de escalas menores para escalas maiores na modelagem hidrológica, frequentemente realizado por meio de médias ou somas em uma extensão espacial ou temporal específica}
 }
 
 \newglossaryentry{downscaling}
 {
-	name=escalonamento descendente,
-	description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    name=escalonamento descendente,
+    description={Processo de transferência de informações de escalas maiores para escalas menores na modelagem hidrológica, que geralmente envolve métodos não-triviais e hipóteses auxiliares que consideram a heterogeneidade dos processos hidrológicos em diferentes escalas, incluindo o uso de co-variáveis (indicadores)}
 }
 
 \newglossaryentry{urh}
 {
-	name=unidades de resposta hidrológica,
-	description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    name=unidades de resposta hidrológica,
+    description={Segmentos ou blocos espaciais em uma bacia hidrográfica que representam regiões hidrológicas homogêneas em termos de resposta hidrológica, facilitando a modelagem semi-distribuída ao agrupar áreas com similaridade hidrológica}
 }
 
 \newglossaryentry{regionalization}
 {
-	name=regionalização,
-	description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    name=regionalização,
+    description={Processo de adaptar e aplicar modelos hidrológicos desenvolvidos para uma região específica a outras regiões com características diferentes, envolvendo a generalização de parâmetros e processos do modelo para se adequar às novas condições geográficas e hidrológicas}
 }
 
 \newglossaryentry{models-ditrib}
 {
-	name=modelos distribuídos,
-	description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    name=modelos distribuídos,
+    description={Modelos hidrológicos que representam os processos hidrológicos em uma malha espacial detalhada, permitindo a simulação de variações locais em parâmetros e fluxos. Esses modelos são capazes de capturar a heterogeneidade espacial e fornecer resultados mais precisos em escalas locais, porém geralmente requerem maior capacidade computacional}
 }
 
 \newglossaryentry{scaling-func}
 {
-	name=função de escalonamento,
-	description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    name=função de escalonamento,
+    description={Função matemática que define como as informações são transferidas entre diferentes escalas na modelagem hidrológica, determinando a forma de agregação ou distribuição de parâmetros e variáveis para manter a consistência e precisão do modelo}
 }
 
 \newglossaryentry{hetspatial}
 {
-	name=heterogeneidade espacial,
-	description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    name=heterogeneidade espacial,
+    description={Variabilidade ou diversidade na distribuição espacial de características hidrológicas, como solos, cobertura vegetal, topografia e propriedades hidrodinâmicas. A heterogeneidade espacial influencia significativamente a resposta hidrológica de uma bacia, exigindo que os modelos hidrológicos consigam representar essa diversidade para simular com precisão os processos de escoamento e infiltração}
 }
 
 \newglossaryentry{downscaling2}
 {
-	name=função de distribuição,
-	description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    name=função de distribuição,
+    description={Método ou função utilizada na modelagem hidrológica para distribuir ou ajustar parâmetros ou variáveis de uma escala maior para uma escala menor, ou vice-versa. Essa função auxilia na transferência de informações entre diferentes níveis de detalhamento espacial, garantindo que as características locais sejam adequadamente representadas no modelo}
 }
 
 \newglossaryentry{hydro-simi}
 {
-	name=similaridade hidrológica,
-	description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    name=similaridade hidrológica,
+    description={Condição em que diferentes regiões ou unidades hidrológicas exibem comportamentos hidrológicos semelhantes, permitindo que possam ser agrupadas ou tratadas de maneira uniforme em modelos hidrológicos. A similaridade hidrológica é utilizada para simplificar a modelagem distribuída, agrupando áreas com respostas hidrológicas homogêneas}
 }
 
 \newglossaryentry{models-semid}
 {
-	name=modelos semi-distribuídos,
-	description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    name=modelos semi-distribuídos,
+    description={Modelos hidrológicos que utilizam uma abordagem intermediária entre modelos totalmente distribuídos e modelos agregados. Esses modelos dividem a bacia hidrográfica em unidades de resposta hidrológica, permitindo uma representação mais detalhada do que os modelos agregados, mas com menor complexidade computacional que os modelos distribuídos}
 }
 
 \newglossaryentry{tsi}
 {
-	name=índice de saturação,
-	description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    name=índice de saturação,
+    description={Indicador topográfico utilizado na modelagem hidrológica para representar a saturação do solo em uma determinada área. O índice de saturação relaciona características topográficas como declividade e área de drenagem para determinar a propensão de uma área a se tornar saturada durante eventos de chuva, sendo fundamental para a distribuição local do déficit de água no solo nos modelos hidrológicos}
 }
 
 \newglossaryentry{twi}
 {
-	name=Índice Topográfico de Umidade (TWI),
-	description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    name=Índice Topográfico de Umidade (\texttt{TWI}),
+    description={Índice topográfico utilizado para estimar a umidade do solo com base na declividade do terreno e na área de drenagem. Calculado pela fórmula $\text{T}_i = \ln{(\alpha_{i}/\tan \beta_{i})}$, onde $\alpha_{i}$ é a área de drenagem local por unidade de contorno e $\beta_{i}$ é a declividade local do terreno. O \texttt{TWI} ajuda a identificar áreas propensas à saturação e ao escoamento, sendo amplamente utilizado em modelos hidrológicos como o \texttt{TOPMODEL}}
 }
 
 \newglossaryentry{trans-hyd}
 {
-	name=transmissividade hidráulica,
-	description={\textcolor{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus}}
+    name=transmissividade hidráulica,
+    description={Propriedade hidrológica do solo que representa a capacidade do meio poroso de transmitir água por unidade de largura e profundidade. Equivalente à condutividade hidráulica por unidade de contorno lateral}
+}
+
+\newglossaryentry{dem}
+{
+    name=modelo digital de elevação (\texttt{MDE}),
+    description={Representação digital da superfície terrestre que captura a topografia de uma área específica, utilizada em geoprocessamento e modelagem hidrológica para derivar características como declividade, área de drenagem e índices topográficos de saturação}
+}
+
+\newglossaryentry{hand}
+{
+    name=Altura Sobre a Drenagem Mais Próximas (\texttt{HAND}),
+    description={Índice topográfico que representa a altura de um ponto em relação ao canal de drenagem mais próximo. Calculado pela diferença entre a altitude local e a altitude da drenagem mais próxima, o HAND é utilizado para mapear áreas úmidas e identificar riscos de inundação. É uma ferramenta valiosa para modelagem hidrológica e geoprocessamento, permitindo a representação da topografia em relação às redes de drenagem}
+}
+\newglossaryentry{sepsurf}
+{
+    name=superfície separadora,
+    description={Superfície que é criada pela transição de permeabilidade vertical entre horizontes de solo, separando o fluxo vertical em uma componente lateral. O conceito é generalizado pela teoria da conectividade}
+}
+\newglossaryentry{activ-threshold}
+{
+    name=limiar de ativação,
+    description={Nível mínimo necessário para que a conectividade da rede de drenagem (canais ou poros) de um reservatório possa iniciar a transmissão de água}
+}
+\newglossaryentry{conect-theory}
+{
+    name=Teoria da Conectividade,
+    description={Teoria unificadora da Hidrologia proposta por Jeffrey McDonnell e colegas para superar os problemas do paradigma da diferenciação, assim como endereçar o paradoxo da água velha}
+}
+
+\newglossaryentry{fillspill}
+{
+    name=processo de saturação-ativação,
+    description={Processo hidrológico que se manifesta em todas as escalas na Teoria da Conectividade}
+}
+
+\newglossaryentry{activ-level}
+{
+    name=nível de ativação,
+    description={Equivalente a limiar de ativação}
+}
+
+\newglossaryentry{func-activ}
+{
+    name=função de ativação,
+    description={Hipótese formal sobre como que a ativação de um reservatório se desenvolve à medida que a saturação ocorre}
+}
+
+\newglossaryentry{frag-level}
+{
+    name=nível de fragmentação,
+    description={Parâmetro que regula a velocidade ativação na equação de saturação. Quanto maior a fragmentação, mais amortecida é a ativação do reservatório. O valor do nível de fragmentação é o valor do reservatório correspondente à metade da velocidade máxima de ativação}
 }
