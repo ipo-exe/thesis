@@ -3,8 +3,84 @@
 
 % ------------ main document ------------ 
 \begin{document}
-\chapter{Motivação}
+\chapter{Introdução -- o caminho do problema}
+
+% custom paragraph skip
+\setlength{\parskip}{\myparskip}
+
+ --- Iporã, pense primeiro no problema, não na ferramenta. 
+\vspace{0.5cm}\newline
+\noindent Foi o que o professor Guilherme Marques me disse em uma tarde quente em dezembro de 2017, no Instituto de Pesquisas Hidráulicas da Universidade Federal do Rio Grande do Sul, em Porto Alegre. Eu havia recentemente sido aprovado na seleção do mestrado acadêmico no programa de pós-graduação do instituto, e estabelecia os primeiros contatos com o pesquisador que iria me orientar pelo menos nos próximos dois anos, que com o doutorado se tornaram sete. \say{\textit{A ferramenta a gente pensa depois; antes precisamos entender com profundidade quais são as perguntas relevantes do problema de pesquisa.}}, ele continuou, tomando um café e explicando que o método, se eleito antes do problema, iria nos aprisionar de forma irremediável. Se fosse preciso, ele me encorajou, eu teria que criar um método inovador para buscar soluções inovadoras. Mas antes, eu deveria formular bem as perguntas. Eu gostei disso. 
+
+\par Com esse princípio metodológico formando raízes, fui a Brasília no Fórum Mundial da Água, em março de 2018, em uma verdadeira exploração de problemas, não de ferramentas. No evento, o contato com a pauta das Nações Unidas (2018) \cite{un2018} me convenceu a estudar a temática das soluções baseadas na natureza no gerenciamento dos recursos hídricos. Quando voltei para Porto Alegre, já estava decidido a compreender como que a infraestrutura verde poderia ser expandida em bacias hidrográficas para melhorar a segurança hídrica das cidades. Considerando as pressões de futuro climático e demandas por água, as perguntas do problema eram inúmeras: o que fazer? quando fazer? quanto vai custar? vale a pena o investimento? onde fazer o investimento? Tais questões tornaram-se incrementalmente mais relevantes para a sociedade após o sancionamento da Política Nacional de Pagamentos por Serviços Ambientais em 2021 \cite{brasil2021} e o crescente movimento em torno da revitalização de bacias, como no Programa Nacional de Revitalização de Bacias Hidrográficas. Os impactos das mudanças climáticas, que em 2023 e 2024 foram escancarados em todo o planeta, reforçam ainda mais a necessidade de estratégias de adaptação com embasamento científico. 
+
+\par Essas perguntas de pesquisa me conduziram gradualmente para conceber e programar um modelo hidrológico, que eu chamei de \texttt{PLANS}, feito sob medida para ajudar na formulação de soluções. Ou seja, ao invés de depender de modelos genéricos e já prontamente utilizáveis, o caminho do problema me obrigou a arquitetar uma ferramenta inédita. Os primeiros resultados dessa trajetória foram publicados em Possantti \& Marques (2022) \cite{Possantti2022a}, em que avaliamos as questões de custo-benefício e o planejamento das ações no tempo para cenários na bacia hidrológica do Rio dos Sinos. Nesse caso, a principal necessidade de um modelo próprio e maleável foi o acoplamento em um algoritmo de otimização, a Programação Dinâmica. Como milhares de simulações eram necessárias em cada cenário avaliado, eu configurei o modelo como uma rotina na mesma linguagem de programação do algoritmo, que era \texttt{python}. Daí em diante, avançamos sobre o problema de alocação espacial: \textit{onde} fazer as ações em uma bacia hidrográfica. Aqui, para chegar nos resultados do estudo de caso publicado em Possantti \textit{et al.} (2023) \cite{Possantti2023a}, precisei me aprofundar sobre a representação espacial dos processos hidrológicos nas encostas das bacias, o que me levou estranhamente a aspectos cada vez mais filosóficos envolvendo representação e modelagem. É que para obter resultados na escala operacional necessária, garantindo a capacidade de ordenamento de lotes rurais, o modelo precisava produzir resultados suficientemente detalhados. Uma alternativa para isso seria utilizar modelos fisicamente embasados, que simulam campos vetoriais de velocidade da água em meio saturado. Mas essa abordagem era proibitiva em termos computacionais, além de exibir tantas incertezas quanto os outros modelos semi-distribuídos. Foi assim que concluí que os princípios gerais do \texttt{TOPMODEL} eram a única maneira capaz de produzir resultados satisfatórios para endereçar o problema de alocação espacial. Com isso, uma nova versão do modelo \texttt{PLANS} foi programada, de maneira a assimilar as vantagens técnicas do \texttt{TOPMODEL} com novos indicadores de saturação do terreno, como o \texttt{HAND}.
+
+\par Com o tempo, o princípio metodológico -- pensar primeiro no problema -- tornou-se uma tarefa mais complexa do que eu jamais havia previsto. Ainda que a orientação inicial não era para ser tomada com tanta literalidade, eu fui abrindo portas e mais portas no caminho do problema, em uma exploração praticamente interminável. Isso levou ao ponto da banca de qualificação afirmar, corretamente, que eu estava caminhando para trás. No caso da modelagem, o preço de um entendimento mais profundo veio com o reconhecimento de problemas inescapáveis, relacionados com a incerteza empírica: a equifinalidade e a escala. São questões que explicam como é possível que um modelo semi-distribuído pode ser tão satisfatório quanto um modelo baseado em campos vetoriais contínuos. Dilemas dessa natureza também surgiram pelo lado da gestão, pois definir prioridades requer um princípio fundamental, que no caso das bacias hidrográficas é o da adicionalidade potencial. Na mesma linha, demarcar se vale a pena ou não o investimento em infraestrutura verde, exige a proposição de um sistema de valoração dos processos hidrológicos. Em poucos passos, eu me deparei com questões mais profundas, que são melhor articuladas pela Filosofia, não pela Ciência. 
+
+\par A tese aqui apresentada, portanto, é expressão dessa exploração de problemas. O texto a seguir realiza uma síntese sobre os princípios e problemas fundamentais no uso de modelos hidrológicos no contexto da revitalização de bacias hidrográficas. O objetivo da monografia, portanto, é estabelecer e reforçar as conexões conceituais necessárias para fundamentar o uso de modelos hidrológicos nesse âmbito. 
+
+Ao contrário da \textbf{análise}, de faz um desmembramento conceitual, a síntese é o processo de reunir elementos diferentes, concretos ou abstratos, e organizá-los num todo coerente.  
+
+Não raro, os meus colegas se ocupam em suas teses de analisar questões científicas relativamente específicas, respondendo a elas com métodos e estratégias igualmente especiais. 
+
+É claro que esse movimento intelectual é fundamental para se ganhar profundidade local, mas eventualmente alguém precisa fazer o esforço no sentido contrário, para unificar as diversas abordagens analíticas em uma visão global coerente.
+
+O trabalho de síntese, principalmente voltado para fundamentações, torna-se cada vez mais abandonado pela febril demanda acadêmica de publicações em periódicos revisados por pares, que exigem resultados inéditos. 
+
+Isso torna a prática científica do uso de modelos hidrológicos perigosamente desprovida de senso crítico. Mensen \textit{et al.} (2022), por exemplo, ao entrevistar 14 pesquisadores na área de recursos hídricos, relatam que justificativa declarada para o uso de modelos e suas configurações são substancialmente definidas pelos colegas mais experientes do grupo de pesquisa, ou seja, resultam de um processo de imitação.
+
+Keith Beven (2002)\cite{Beven2002a}
+
+Herman Daly (2015) \cite{Daly2015a}
+
+
+O resultado inovador, portanto, é o conhecimento \textit{sobre} o conhecimento. Com ela, surge uma organização, ou mapa de ideias, que agiliza a compreensão abrangente, aprofundada e integrada dos assuntos relacionados com o uso de modelos hidrológicos no gerenciamento integrado de recursos hídricos, em especial no desenho de estratégias para a expansão da infraestrutura verde em bacias de ordem zero, como em esquemas de Pagamentos por Serviços Ambientais.
+
+A partir dessa organização, portanto, 
+
+Por um lado, a comunidade científica beneficia-se para articular nas frentes puras e aplicadas os conceitos organizados, buscando novas soluções, mas também revelando novos problemas que eventualmente demandam uma reformulação completa dos fundamentos pré-estabelecidos.
+
+
+
+Por outro lado, a comunidade 
+
+
+Chat Bot Large Language Models
+
+
+
+Em Possantti \& Marques (2022) \cite{Possantti2022a}
+
+Em 2022, no exame de qualificação, a banca me chamou a atenção de estar dando passos \say{para trás}
+
+
+
+Conhecimento científico está preocupado sobre se uma afirmação é verdadeira ou falsa com base em evidências empíricas. Como veremos no Capítulo 1, existem diferentes correntes de pensamento sobre como proceder diante do método científico.
+
+Porém, nem todas as perguntas importantes são científicas. Tão importantes são perguntas que não tem a ver
+
+Oficialmente, meu doutorado iniciou em 2020, alguns dias antes da chegada do coronavírus em Porto Alegre. 
+
+Mas na verdade tudo começou em março de 2018, quando fui ao Fórum Mundial da Água, que ocorreu 
+
+
+
+
+
+
+
+
+É claro, eu 
+
+março de 2018, há  ocorreu em Brasília, 
+
 \par Lorem ipsum dolor sit amet consectetur adipiscing elit. Sed ac bibendum orci. Cras erat elit, consequat vel erat ac, tincidunt pulvinar lacus. Pellentesque vitae consectetur quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. The typesetting markup language is specially suitable for documents that include . Given a set of numbers, there are elementary methods to compute its, which is abbreviated. This process is similar to that used for the.
+
+
+Aqui seria "Introdução"  contendo a descrição do seu problema de pesquisa, relevancia, o que ja foi feito (em linhas gerais), qual a lcuna de conhecimento e quais as contribuições do seu trabalho para essas lacunas. 3 páginas no máximo. finaliza explicando a logica dos capitulos seguintes, mostrando com 1 ou 2 linhas linha qual o raciocinio que cada capitulo traz para a ideia central do trabalho.
+
+Recomendo uma introdução geral, antes desse capitulo, onde voce vai explicar o problema de pesquisa, os research gaps e as contribuicoes do trabalho. Apos essa ultima parte da introducao voce explica sucintamente a contribuicao de cda capitulo. Esses fundamentos filosoficos devem ser colocados como uma contribuição, como uma forma de reflexão para melhor entender ou justificar as abordagens utilizadas.
 
 
 \end{document}
