@@ -1,0 +1,33 @@
+\documentclass[./main_en.tex]{subfiles}
+\graphicspath{{\subfix{./figs}}}
+
+% ------------ main document ------------
+\begin{document}
+\doublespacing % line spacing
+\large
+
+% style setup
+\newpage
+\renewcommand{\headrulewidth}{0pt}
+\thispagestyle{fancy}
+%... then configure it
+\fancyhf{} % Clear all header and footer fields.
+\fancyfoot{} % clear all footer fields
+\fancyfoot[C]{\thepage}
+
+\begin{center}
+    \sffamily{\Large \textbf{Source code}}
+    \vspace{5mm}
+\end{center}
+\singlespacing
+\normalsize
+
+% custom paragraph skip
+\setlength{\parskip}{\myparskip}
+
+\par This document was produced using \LaTeX. The source code, as well as the figures and English versions, are available in updates maintained in the following repository: \href{https://doi.org/10.5281/zenodo.14560036}{https://doi.org/10.5281/zenodo.14560036}
+
+
+\clearpage
+
+\end{document}
