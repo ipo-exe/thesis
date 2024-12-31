@@ -22,6 +22,8 @@
 % ------------ fonts ------------ 
 \usepackage[T1]{fontenc}
 \usepackage{helvet}
+\usepackage{times}
+\renewcommand{\sfdefault}{phv} % Use Helvetica for sans-serif fonts
 
 % ------------ colors ------------ 
 \usepackage[dvipsnames, table]{xcolor}
@@ -456,7 +458,7 @@ pdfkeywords={keywords},
 
 % ---------------- References ---------------- 
 \clearpage
-\printbibliography
+\printbibliography[heading=bibintoc]
 
 % ---------------- Appendix ---------------- 
 % uncomment this
