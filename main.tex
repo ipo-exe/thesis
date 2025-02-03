@@ -219,7 +219,7 @@ pdfkeywords={keywords},
 % ---------------- define acronyms ------------------------
 \newacronym{glue}{\texttt{GLUE}}{\textit{Generalized Likelihood Uncertantiy Estimation}}
 \newacronym{et}{\texttt{ET}}{evapotranspiração}
-\newacronym{scs}{\texttt{SCS}}{\textit{SoilConservation Service}}
+\newacronym{scs}{\texttt{SCS}}{\textit{Soil Conservation Service}}
 \newacronym{usda}{\texttt{USDA}}{\textit{United States Department of Agriculture}}
 \newacronym{cn}{\texttt{CN}}{\textit{Curve Number}}
 \newacronym{nbs}{\texttt{SBN}}{Soluções Baseadas na Natureza}
@@ -286,15 +286,8 @@ pdfkeywords={keywords},
 % agradecimentos
 \subfile{thanks}
 
-% resumo
-\subfile{abstract}
-
 % ---------------- Document map ---------------- 
 
-% table of contents
-\tableofcontents
-\clearpage	
-	
 % list of figures
 \listoffigures
 \clearpage
@@ -419,13 +412,19 @@ pdfkeywords={keywords},
 \nomenclature[C]{\(\tilde{\text{H}}\)}{HAND normalizado}
 \nomenclature[C]{\(H_w\)}{Fator de dominância de HAND}
 
-
 \printnomenclature
 \normalsize
 \clearpage
 
+% table of contents
+\tableofcontents
+\clearpage	
+
 % ---------------- Thesis Epigraph ---------------- 
 \subfile{epigraph}
+
+% ---------------- Thesis Abstract ---------------- 
+\subfile{abstract}
 
 % ---------------- Chapters setup ---------------- 
 \linenumbers % start line numeration
